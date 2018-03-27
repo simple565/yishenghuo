@@ -1,0 +1,191 @@
+<resources>
+    <string name="app_name">易生活</string>
+
+    <!--登录-->
+    <string name="login">登录</string>
+    <string name="username_hint">手机/邮箱/QQ</string>
+    <string name="password_hint">请输入密码</string>
+    <string name="start_register">没有账号？点我注册</string>
+    <string name="login_error">登录失败</string>
+    <string name="phone_format_error">手机格式有误</string>
+    <string name="phone_not_empty">手机号不能为空</string>
+    <string name="password_not_empty">密码不能为空</string>
+    <string name="nickname_not_empty">昵称不能为空</string>
+    <string name="identifying_code_not_empty">验证码不能为空</string>
+    <string name="disconnect_server">与服务器失联</string>
+
+    <!--注册-->
+    <string name="nickname">昵称</string>
+    <string name="password">密码</string>
+    <string name="verification_code">验证码</string>
+    <string name="error_code">异常码：</string>
+    <string name="please_check_net">请检查网络</string>
+    <string name="load_error">加载失败</string>
+    <string name="please_wait">请稍等</string>
+    <string name="content_no_empty">内容不能为空</string>
+    <string name="complete">完成</string>
+    <string name="change_success">修改成功</string>
+    <string name="change_fail">修改失败</string>
+    <string name="set_success">设置成功</string>
+    <string name="set_fail">设置失败</string>
+    <string name="save">保存</string>
+    <string name="save_success">保存成功</string>
+    <string name="save_fail">保存失败</string>
+    <string name="cancel">取消</string>
+    <string name="sure">确定</string>
+    <string name="sure_with_count">确定(%1$d)</string>
+
+    <!--首页-->
+    <string name="title_home">首页</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_service">服务</string>
+    <string name="title_neighbor">邻里</string>
+    <string name="title_mall">商城</string>
+    <string name="title_account">我的</string>
+    <string name="hot">【今日热点】</string>
+    <string name="on_sale">【今日特价】</string>
+
+    <!--邻里-->
+    <string name="activities">社区活动</string>
+    <string name="news">时事新闻</string>
+    <string name="hot_topic">健康养生</string>
+    <string name="neighbor_circle">邻居圈</string>
+    <string name="dynamic">小区动态</string>
+    <string name="neighbors">同小区的人</string>
+
+    <!--服务-->
+    <string name="service_living">居家生活</string>
+    <string name="service_housekeeping"> 家政服务</string>
+    <string name="service_entrance">门禁系统</string>
+    <string name="service_repairs">家电维修</string>
+    <string name="service_wash">洗护</string>
+
+    <string name="service_property">小区物业</string>
+    <string name="service_property_announce">物业通告</string>
+    <string name="service_announce">小区通告</string>
+    <string name="service_complaints">投诉</string>
+    <string name="service_repair">报修</string>
+
+    <string name="service_recharge">充值缴费</string>
+    <string name="service_property_fee">物业费</string>
+    <string name="service_gas_fee">燃气费</string>
+    <string name="service_water_fee">水费</string>
+    <string name="service_electric_fee">电费</string>
+    <string name="service_parking_fee">停车费</string>
+
+    <string name="service_query">便民消息</string>
+    <string name="service_weather">天气查询</string>
+    <string name="service_traffic">违章查询</string>
+    <string name="service_communities">社区周边</string>
+
+    <string name="service_financial">金融财户</string>
+    <string name="service_house_rent">房屋租借</string>
+    <string name="service_house_sell">房屋买卖</string>
+    <string name="service_finance">金融</string>
+
+
+    <!--天气-->
+    <string name="consult_weather">天气查询</string>
+    <string name="refresh">更新</string>
+    <string name="city">城市</string>
+    <string name="forecast">预报</string>
+    <string name="air_quality">空气质量</string>
+    <string name="living_index">生活指数</string>
+
+    <!--商城-->
+    <string name="mall_cereals">五谷杂粮</string>
+    <string name="mall_fruit">果蔬食材</string>
+    <string name="mall_nourish">滋养养生</string>
+    <string name="mall_snack">零食小吃</string>
+    <string name="mall_cooker">厨房用具</string>
+    <string name="mall_appliance">家用电器</string>
+    <string name="mall_outsourcing">海外购</string>
+    <string name="mall_ticket">景点门票</string>
+
+    <!--我的-->
+    <string name="my_order">我的订单</string>
+    <string name="my_pay">代付款</string>
+    <string name="my_deliver">代发货</string>
+    <string name="my_receive">待收货</string>
+    <string name="my_evaluate">待评价</string>
+    <string name="my_aftermarket">退款/售后</string>
+
+    <string name="my_life">我的生活</string>
+    <string name="my_property">我的小区</string>
+    <string name="my_charge">我的缴费</string>
+    <string name="my_repair">我的报修</string>
+    <string name="my_complaints">我的投诉</string>
+    <string name="quit">退出</string>
+
+    <!--设置-->
+    <string name="my_property2">滨水小区</string>
+    <string name="my_QRcode">我的二维码</string>
+    <string name="the_third">第三方绑定</string>
+    <string name="change_password">修改密码</string>
+    <string name="bind_phone">已绑定手机号</string>
+    <string name="phone">178****xxxx</string>
+    <string name="feedback">意见反馈</string>
+    <string name="about_us">关于我们</string>
+    <string name="quit_account">退出当前账号</string>
+
+    <!--缴费-->
+    <string name="organization">缴费单位</string>
+    <string name="company">丹田物业公司</string>
+    <string name="charge_ID">缴费户号</string>
+    <string name="charge_id">0012345678</string>
+    <string name="charge_NAME">户名</string>
+    <string name="charge_name">妙蛙种子</string>
+    <string name="address">住址信息</string>
+    <string name="address_info">厦门市*****668号</string>
+    <string name="arrears">当前欠费金额</string>
+    <string name="arrears_account">0.00</string>
+    <string name="recharge">充值金额</string>
+    <string name="recharge_money">请输入充值金额</string>
+    <string name="pay_now">立即缴费</string>
+    <!--物业-->
+    <string name="repair_problem">报修问题</string>
+    <string name="submit">提交</string>
+    <string name="detail_explain">详细说明</string>
+    <string name="complain_person">投诉个体</string>
+    <!--家政服务-->
+    <string name="housekeeping_name1">上门清洗挂壁式空调 消毒杀菌去异味</string>
+    <string name="housekeeping_company">xxx有限公司</string>
+    <string name="housekeeping_price1">120元/次</string>
+    <string name="housekeeping_name2">冰箱上门除冰 清洗消毒 除菌去味</string>
+    <string name="housekeeping_price2">80元/次</string>
+    <!--家电维修-->
+    <string name="service_repair_name1">手机维修 换屏贴膜 各类周边</string>
+    <string name="service_repair_company">xxx有限公司</string>
+    <string name="service_repair_price1">10-120元不等</string>
+    <string name="service_repair_name2">维修热水器 维修电冰箱</string>
+    <string name="service_repair_price2">30-60元不等</string>
+    <!--洗护-->
+    <string name="washing_name1">干洗衣物</string>
+    <string name="washing_name2">衣物清洗</string>
+    <string name="washing_company">xxx有限公司</string>
+    <string name="washing_price">30-60元不等</string>
+    <!--门禁系统-->
+    <string name="guess_come1">客人来访</string>
+    <string name="guess_come2">访客授权</string>
+    <string name="gate">小区门禁</string>
+    <string name="gate_introduce1">小区大门</string>
+    <string name="gate_introduce2">小区侧门</string>
+    <string name="gate_introduce3">小区北门</string>
+    <string name="gate_introduce4">单元楼门</string>
+    <string name="passageway">小区楼道</string>
+    <string name="passageway2">三号楼一单元三楼</string>
+    <string name="door_feedback">门禁信息反馈</string>
+    <string name="warm_prompt">温馨提示：若您无法正常使用该门禁系统，请点击该门禁反馈系统按钮，我们将及时派人进行维修，若造成的不便请多多谅解！</string>
+    <!--访客授权-->
+    <string name="guess_phone">访客手机号</string>
+    <string name="phone_address">通讯录</string>
+    <string name="guess_time">授权时段</string>
+    <string name="guess_choose">选择授权的门</string>
+    <string name="dash">—</string>
+    <!--楼栋设置-->
+    <string name="choose_building">选择楼栋</string>
+    <string name="choose_unit">选择单元</string>
+    <string name="choose_floor">选择楼层</string>
+
+</resources>

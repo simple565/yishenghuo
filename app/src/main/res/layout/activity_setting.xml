@@ -1,0 +1,243 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <com.yishenghuo.yishenghuo.ui.TitleBar
+        android:id="@+id/setting_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titlebar"
+        android:background="@drawable/title_background"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/white"
+        android:padding="@dimen/account_padding">
+
+        <ImageView
+            android:id="@+id/setting_iv_favicon"
+            android:layout_marginStart="10dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/my_favicon" />
+
+        <TextView
+            android:id="@+id/setting_tv_nickname"
+            style="@style/nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:layout_marginEnd="40sp"
+            android:text="皮卡皮卡丘"/>
+
+        <ImageView
+            android:layout_width="25sp"
+            android:layout_height="25sp"
+            android:layout_marginTop="20sp"
+            android:layout_marginStart="110sp"
+            android:background="@drawable/ic_arrow_right" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:padding="@dimen/account_padding">
+
+        <TextView
+            style="@style/nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10sp"
+            android:text="@string/my_property"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="160sp"
+            android:text="@string/my_property2"/>
+
+        <ImageView
+            android:layout_width="23sp"
+            android:layout_height="23sp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/ic_arrow_right" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:padding="@dimen/account_padding">
+
+        <TextView
+            style="@style/nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10sp"
+            android:text="@string/feedback" />
+
+        <ImageView
+            android:layout_width="23sp"
+            android:layout_height="23sp"
+            android:layout_marginStart="230sp"
+            android:background="@drawable/ic_arrow_right" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:padding="@dimen/account_padding">
+
+        <TextView
+            style="@style/nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10sp"
+            android:text="@string/my_QRcode"/>
+
+        <ImageView
+            android:layout_width="23sp"
+            android:layout_height="23sp"
+            android:layout_marginStart="175sp"
+            android:background="@drawable/ic_code" />
+
+        <ImageView
+            android:layout_width="23sp"
+            android:layout_height="23sp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/ic_arrow_right" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:padding="@dimen/account_padding">
+
+        <TextView
+            style="@style/nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:text="@string/the_third"/>
+
+        <ImageView
+            android:layout_width="23sp"
+            android:layout_height="23sp"
+            android:layout_marginLeft="120sp"
+            android:background="@drawable/ic_qq" />
+
+        <ImageView
+            android:layout_width="23sp"
+            android:layout_height="23sp"
+            android:layout_marginLeft="5sp"
+            android:background="@drawable/ic_weixin" />
+
+        <ImageView
+            android:layout_width="23sp"
+            android:layout_height="23sp"
+            android:layout_marginStart="5sp"
+            android:background="@drawable/ic_weixin" />
+
+        <ImageView
+            android:layout_width="23sp"
+            android:layout_height="23sp"
+            android:layout_marginStart="10sp"
+            android:background="@drawable/ic_arrow_right" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:padding="@dimen/account_padding">
+
+        <TextView
+            style="@style/nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10sp"
+            android:text="@string/change_password"/>
+
+        <ImageView
+            android:layout_width="23sp"
+            android:layout_height="23sp"
+            android:layout_marginStart="230sp"
+            android:background="@drawable/ic_arrow_right" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:padding="@dimen/account_padding">
+
+        <TextView
+            style="@style/nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10sp"
+            android:text="@string/bind_phone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="105sp"
+            android:text="@string/phone" />
+
+        <ImageView
+            android:layout_width="23sp"
+            android:layout_height="23sp"
+            android:layout_marginStart="10sp"
+            android:background="@drawable/ic_arrow_right" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:padding="@dimen/account_padding">
+
+        <TextView
+            style="@style/nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:text="@string/about_us"/>
+
+        <ImageView
+            android:layout_width="23sp"
+            android:layout_height="23sp"
+            android:layout_marginStart="230sp"
+            android:background="@drawable/ic_arrow_right" />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="@dimen/account_button_quit"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20sp"
+        android:background="@drawable/account_quit_backgound"
+        android:text="@string/quit_account"
+        android:textColor="@color/white"/>
+    </LinearLayout>
+
+</ScrollView>

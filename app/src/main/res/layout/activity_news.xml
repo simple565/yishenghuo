@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yishenghuo.yishenghuo.activity.NewsActivity">
+
+    <com.yishenghuo.yishenghuo.ui.TitleBar
+        android:id="@+id/news_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titlebar"
+        android:background="@color/title_color"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp" />
+    <ListView
+        android:id="@+id/news_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:isScrollContainer="true"/>
+</LinearLayout>

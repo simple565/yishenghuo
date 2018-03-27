@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/page_background"
+              android:orientation="vertical">
+
+    <com.yishenghuo.yishenghuo.ui.TitleBar
+        android:id="@+id/mall_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titlebar"
+        android:background="@drawable/title_background"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        />
+
+    <com.yishenghuo.yishenghuo.ui.BannerView
+        android:id="@+id/mall_bannerview"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"/>
+
+
+    <include
+        layout="@layout/mall_menu_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <include
+        layout="@layout/mall_menu_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_weight="1"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        android:paddingEnd="5dp"
+        android:paddingStart="5dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/on_sale"
+            android:textColor="@color/title_color"
+            android:textStyle="bold"/>
+
+        <GridView
+            android:id="@+id/mall_gv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:horizontalSpacing="5dp"
+            android:numColumns="4"
+            android:padding="5dp"
+            android:scrollbars="none"
+            android:verticalSpacing="5dp"/>
+    </LinearLayout>
+</LinearLayout>

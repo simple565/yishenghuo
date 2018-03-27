@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/title_background"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp">
+
+        <ImageButton
+            android:id="@+id/home_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_location" />
+
+        <EditText
+            android:id="@+id/home_edt_search"
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/home_edittext_background"
+            android:cursorVisible="false"
+            android:drawableStart="@drawable/ic_search"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp" />
+
+        <ImageButton
+            android:id="@+id/home_title_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_message" />
+
+    </RelativeLayout>
+
+    <com.yishenghuo.yishenghuo.ui.BannerView
+        android:id="@+id/home_bannerview"
+        android:layout_width="match_parent"
+        android:layout_height="120dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:paddingBottom="5dp"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp"
+        android:paddingTop="5dp">
+
+        <ImageView
+            android:id="@+id/home_bt_mengjin"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/home_mengjin" />
+
+        <ImageView
+            android:id="@+id/home_bt_tongzhi"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="30dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/home_tongzhi" />
+
+        <ImageView
+            android:id="@+id/home_bt_jiaofei"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="30dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/home_jiaofei" />
+
+        <ImageView
+            android:id="@+id/home_bt_weixiu"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="30dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/home_weixiu" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="3dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:paddingStart="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/hot"
+            android:textColor="@color/title_color"
+            android:textStyle="bold" />
+
+        <TextSwitcher
+            android:id="@+id/ts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:inAnimation="@anim/set_in"
+            android:outAnimation="@anim/set_out" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="3dp"
+        android:layout_weight="1"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        android:paddingEnd="5dp"
+        android:paddingStart="5dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/on_sale"
+            android:textColor="@color/title_color"
+            android:textStyle="bold" />
+
+        <GridView
+            android:id="@+id/home_gv_goods"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:horizontalSpacing="5dp"
+            android:numColumns="4"
+            android:padding="5dp"
+            android:scrollbars="none"
+            android:verticalSpacing="5dp" />
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,96 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_background"
+    android:orientation="vertical">
+
+    <com.yishenghuo.yishenghuo.ui.TitleBar
+        android:id="@+id/washing_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titlebar"
+        android:background="@drawable/title_background"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120sp"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/property"
+            android:id="@+id/washing_img1" />
+
+        <TextView
+            android:id="@+id/washing_name1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/washing_name1"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/washing_company1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/washing_company" />
+
+        <TextView
+            android:id="@+id/washing_price1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/washing_price" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120sp"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/property"
+            android:id="@+id/washing_img2" />
+
+        <TextView
+            android:id="@+id/washing_name2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/washing_name2"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/washing_company2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/washing_company" />
+
+        <TextView
+            android:id="@+id/washing_price2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/washing_price" />
+
+    </RelativeLayout>
+
+</LinearLayout>

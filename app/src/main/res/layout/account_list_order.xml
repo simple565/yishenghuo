@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/account_pay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/icon_middle"
+            android:layout_height="@dimen/icon_middle"
+            android:background="@drawable/my_pay"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/my_pay"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/account_deliver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/icon_middle"
+            android:layout_height="@dimen/icon_middle"
+            android:background="@drawable/my_deliver"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/my_deliver"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/account_receive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/icon_middle"
+            android:layout_height="@dimen/icon_middle"
+            android:background="@drawable/my_receive"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/my_receive"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/account_evaluate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/icon_middle"
+            android:layout_height="@dimen/icon_middle"
+            android:background="@drawable/my_evaluate"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/my_evaluate"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/account_aftermarket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/icon_middle"
+            android:layout_height="@dimen/icon_middle"
+            android:background="@drawable/my_aftermarket"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/my_aftermarket"/>
+    </LinearLayout>
+
+</LinearLayout>

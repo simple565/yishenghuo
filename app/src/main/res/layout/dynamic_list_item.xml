@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/item_dynamic_iv_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+
+    <TextView
+        android:id="@+id/item_dynamic_tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/item_dynamic_iv_icon" />
+
+    <TextView
+        android:id="@+id/item_dynamic_tv_brf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/item_dynamic_iv_icon"
+        android:layout_alignStart="@id/item_dynamic_tv_name"
+        android:layout_below="@id/item_dynamic_tv_name" />
+</RelativeLayout>
