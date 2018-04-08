@@ -1,4 +1,4 @@
-package com.yishenghuo.yishenghuo;
+package com.yishenghuo.yishenghuo.base;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

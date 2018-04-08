@@ -1,6 +1,7 @@
 package com.yishenghuo.yishenghuo.fragment;
 
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -10,6 +11,7 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.GridView;
@@ -20,8 +22,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewSwitcher;
 
+import com.oragee.banners.BannerView;
 import com.yishenghuo.yishenghuo.R;
-import com.yishenghuo.yishenghuo.ui.BannerView;
+import com.yishenghuo.yishenghuo.activity.EntranceActivity;
 import com.yishenghuo.yishenghuo.activity.LoginActivity;
 import com.yishenghuo.yishenghuo.activity.MessageActivity;
 import com.yishenghuo.yishenghuo.adapter.GoodsListAdapter;
@@ -30,19 +33,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HomeFragment extends Fragment {
-    private BannerView bannerView;
     private List<View> viewList;
     private int[] imgs = {R.drawable.banner, R.drawable.banner, R.drawable.banner, R.drawable.banner};
-    private ImageView btn_mengjin, btn_weixiu, btn_tongzhi, btn_jiaofei, btn_locate,btn_msg;
+    private ImageView btn_locate, btn_msg;
     private GridView gridView;
     private EditText editText;
     private TextSwitcher ts;
-
-
-    private ArrayList<ImageView> viewlist;
-    private ArrayList<ImageView> dotlist;
-    private bitHandler bitHandler;
-    private int index = 0;
 
 
     private int[] images = {R.drawable.goods_03, R.drawable.goods_04,
@@ -59,14 +55,13 @@ public class HomeFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, null);
-        ini(view);
+        iniView(view);
 
         ts.setFactory(new ViewSwitcher.ViewFactory() {
             @Override
@@ -87,16 +82,12 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        bitHandler = new bitHandler();
-        new myThread().start();
         editText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 editText.setCursorVisible(true);
             }
         });
-
-
         return view;
     }
 
@@ -105,13 +96,13 @@ public class HomeFragment extends Fragment {
      *
      * @param view
      */
-    private void ini(View view) {
-        bannerView = (BannerView) view.findViewById(R.id.home_bannerview);
+    private void iniView(View view) {
+        BannerView bannerView = view.findViewById(R.id.home_bannerview);
         iniViewList(imgs);
         bannerView.startLoop(true);
         bannerView.setViewList(viewList);
 
-        btn_locate = (ImageButton) view.findViewById(R.id.home_location);
+        ImageButton btn_locate = (ImageButton) view.findViewById(R.id.home_location);
         btn_locate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -119,7 +110,7 @@ public class HomeFragment extends Fragment {
                 startActivity(intent);
             }
         });
-        btn_msg=(ImageButton)view.findViewById(R.id.home_title_message);
+        btn_msg = (ImageButton) view.findViewById(R.id.home_title_message);
         btn_msg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -127,16 +118,16 @@ public class HomeFragment extends Fragment {
                 startActivity(intent);
             }
         });
-        btn_mengjin = (ImageView) view.findViewById(R.id.home_bt_mengjin);
-        btn_mengjin.setOnClickListener(new View.OnClickListener() {
+        ImageView iv_entrance = (ImageView) view.findViewById(R.id.home_btn_entrance);
+        iv_entrance.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(), "我是门禁", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getActivity(), EntranceActivity.class));
             }
         });
-        btn_tongzhi = (ImageView) view.findViewById(R.id.home_bt_tongzhi);
-        btn_jiaofei = (ImageView) view.findViewById(R.id.home_bt_jiaofei);
-        btn_weixiu = (ImageView) view.findViewById(R.id.home_bt_weixiu);
+        ImageView iv_notification = (ImageView) view.findViewById(R.id.home_btn_notification);
+        ImageView iv_payment = (ImageView) view.findViewById(R.id.home_btn_payment);
+        ImageView iv_repair = (ImageView) view.findViewById(R.id.home_btn_repair);
 
         gridView = (GridView) view.findViewById(R.id.home_gv_goods);
         gridView.setAdapter(new GoodsListAdapter(view.getContext()));
@@ -150,42 +141,12 @@ public class HomeFragment extends Fragment {
     /**
      * 初始化banner图片
      */
-
     private void iniViewList(int[] imgs) {
         viewList = new ArrayList<>();
         for (int i = 0; i < imgs.length; i++) {
             ImageView imageview = new ImageView(getActivity());
             imageview.setBackgroundResource(imgs[i]);
             viewList.add(imageview);
-
-        }
-    }
-
-    class bitHandler extends Handler {
-        @Override
-        public void handleMessage(Message msg) {
-            super.handleMessage(msg);
-            ts.setText(hot[index]);
-            index++;
-            if (index == hot.length)
-                index = 0;
-        }
-    }
-
-    class myThread extends Thread {
-        @Override
-        public void run() {
-            super.run();
-            while (index < hot.length) {
-                try {
-                    synchronized (getActivity()) {
-                        bitHandler.sendEmptyMessage(0);
-                        this.sleep(2000);
-                    }
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
         }
     }
 }

@@ -12,11 +12,11 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.oragee.banners.BannerView;
 import com.yishenghuo.yishenghuo.R;
 import com.yishenghuo.yishenghuo.activity.DynamicActivity;
 import com.yishenghuo.yishenghuo.activity.NeighborCircleActivity;
 import com.yishenghuo.yishenghuo.activity.NeighborsActivity;
-import com.yishenghuo.yishenghuo.ui.BannerView;
 import com.yishenghuo.yishenghuo.ui.TitleBar;
 import com.yishenghuo.yishenghuo.activity.NewsActivity;
 
@@ -24,7 +24,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class NeighborFragment extends Fragment {
-    private BannerView bannerView;
     private TextView activities, news, hot_topic;
     private TitleBar mTitleBar;
     private RelativeLayout neighbor_circle, dynamic, neighbors;
@@ -53,7 +52,7 @@ public class NeighborFragment extends Fragment {
         mTitleBar = (TitleBar) view.findViewById(R.id.neighbor_titlebar);
         mTitleBar.setText("邻里");
 
-        bannerView = (BannerView) view.findViewById(R.id.neighbor_bannerview);
+        BannerView bannerView = (BannerView) view.findViewById(R.id.neighbor_bannerview);
         bannerView.startLoop(true);
         iniViewList(imgs);
         bannerView.setViewList(viewList);

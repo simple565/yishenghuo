@@ -40,7 +40,7 @@
 
     </RelativeLayout>
 
-    <com.yishenghuo.yishenghuo.ui.BannerView
+    <com.oragee.banners.BannerView
         android:id="@+id/home_bannerview"
         android:layout_width="match_parent"
         android:layout_height="120dp" />
@@ -55,39 +55,39 @@
         android:paddingTop="5dp">
 
         <ImageView
-            android:id="@+id/home_bt_mengjin"
+            android:id="@+id/home_btn_entrance"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_weight="1"
             android:scaleType="fitCenter"
-            android:src="@drawable/home_mengjin" />
+            android:src="@drawable/home_entrance" />
 
         <ImageView
-            android:id="@+id/home_bt_tongzhi"
+            android:id="@+id/home_btn_notification"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="30dp"
             android:layout_weight="1"
             android:scaleType="fitCenter"
-            android:src="@drawable/home_tongzhi" />
+            android:src="@drawable/home_notification" />
 
         <ImageView
-            android:id="@+id/home_bt_jiaofei"
+            android:id="@+id/home_btn_payment"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="30dp"
             android:layout_weight="1"
             android:scaleType="fitCenter"
-            android:src="@drawable/home_jiaofei" />
+            android:src="@drawable/home_payment" />
 
         <ImageView
-            android:id="@+id/home_bt_weixiu"
+            android:id="@+id/home_btn_repair"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="30dp"
             android:layout_weight="1"
             android:scaleType="fitCenter"
-            android:src="@drawable/home_weixiu" />
+            android:src="@drawable/home_repair" />
     </LinearLayout>
 
     <LinearLayout
@@ -96,6 +96,7 @@
         android:layout_marginTop="3dp"
         android:background="#FFFFFF"
         android:orientation="horizontal"
+        android:paddingEnd="5dp"
         android:paddingStart="5dp">
 
         <TextView
@@ -105,6 +106,10 @@
             android:text="@string/hot"
             android:textColor="@color/title_color"
             android:textStyle="bold" />
+
+        <!--<anylife.scrolltextview.ScrollTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />-->
 
         <TextSwitcher
             android:id="@+id/ts"

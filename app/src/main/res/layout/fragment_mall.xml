@@ -14,7 +14,7 @@
         android:paddingStart="10dp"
         />
 
-    <com.yishenghuo.yishenghuo.ui.BannerView
+    <com.oragee.banners.BannerView
         android:id="@+id/mall_bannerview"
         android:layout_width="match_parent"
         android:layout_height="120dp"/>

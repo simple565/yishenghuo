@@ -4,11 +4,13 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ListView;
 
 import com.yishenghuo.yishenghuo.R;
 import com.yishenghuo.yishenghuo.ui.TitleBar;
 
 public class CommunityActivity extends AppCompatActivity {
+    private ListView mListView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,5 +34,6 @@ public class CommunityActivity extends AppCompatActivity {
                 startActivity(new Intent(CommunityActivity.this, MessageActivity.class));
             }
         });
+        mListView = findViewById(R.id.community_list);
     }
 }

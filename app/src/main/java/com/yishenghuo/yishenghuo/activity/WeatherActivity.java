@@ -19,14 +19,16 @@ import com.yishenghuo.yishenghuo.bean.WeatherBean;
 import com.yishenghuo.yishenghuo.R;
 import com.yishenghuo.yishenghuo.util.LocationUtil;
 import com.yishenghuo.yishenghuo.util.WeatherUtil;
-import com.yishenghuo.yishenghuo.WeatherInf;
+import com.yishenghuo.yishenghuo.ApiService;
 import com.yishenghuo.yishenghuo.adapter.DayForecastAdapter;
 import com.yishenghuo.yishenghuo.adapter.SuggestionsListAdapter;
 
 import org.reactivestreams.Subscriber;
 import org.reactivestreams.Subscription;
 
+import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
@@ -101,18 +103,17 @@ public class WeatherActivity extends AppCompatActivity {
         final String city = LocationUtil.getLocation(this);
         //创建Retrofit对象
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(WeatherInf.BASE_URL) // 设置 网络请求 Url
+                .baseUrl( ApiService.WEATHER_BASE_URL) // 设置 网络请求 Url
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create()) //设置使用Gson解析(记得加入依赖)
                 .build();
-        final WeatherInf weatherInf = retrofit.create(WeatherInf.class);
+        final ApiService weatherInf = retrofit.create(ApiService.class);
         weatherInf.getWeatherInfo(city, API_KEY)
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Subscriber<WeatherBean>() {
+                .subscribe(new Observer<WeatherBean> () {
                     @Override
-                    public void onSubscribe(Subscription s) {
-                        s.request(Long.MAX_VALUE);
+                    public void onSubscribe(Disposable disposable) {
                         Log.d("TEST", Thread.currentThread().getName());
                     }
 
