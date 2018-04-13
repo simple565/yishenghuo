@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.yishenghuo.yishenghuo.ui.TitleBar
+    <com.yishenghuo.yishenghuo.ui.weiget.TitleBar
         android:id="@+id/neighbors_titlebar"
         style="@style/titlebar"
         android:layout_width="match_parent"

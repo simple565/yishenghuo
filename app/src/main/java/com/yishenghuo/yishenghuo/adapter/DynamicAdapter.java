@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 
 import com.bumptech.glide.Glide;
-import com.yishenghuo.yishenghuo.bean.DynamicItemBean;
+import com.yishenghuo.yishenghuo.Model.bean.DynamicItemBean;
 import com.yishenghuo.yishenghuo.R;
 
 import java.util.List;

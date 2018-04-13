@@ -1,13 +1,12 @@
 package com.yishenghuo.yishenghuo.adapter;
 
-import android.media.tv.TvContentRating;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.yishenghuo.yishenghuo.bean.CommunityActivityBean;
+import com.yishenghuo.yishenghuo.Model.bean.CommunityActivityBean;
 
 import java.util.List;
 

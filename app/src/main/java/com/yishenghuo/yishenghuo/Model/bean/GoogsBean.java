@@ -1,4 +1,4 @@
-package com.yishenghuo.yishenghuo.bean;
+package com.yishenghuo.yishenghuo.Model.bean;
 
 /**
  * Created by Lian on 2017/9/26.

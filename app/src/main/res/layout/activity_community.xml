@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context=".activity.CommunityActivity">
 
-    <com.yishenghuo.yishenghuo.ui.TitleBar
+    <com.yishenghuo.yishenghuo.ui.weiget.TitleBar
         android:id="@+id/community_titlebar"
         style="@style/titlebar"
         android:layout_width="match_parent"

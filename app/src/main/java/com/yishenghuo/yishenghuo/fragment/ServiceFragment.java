@@ -3,7 +3,6 @@ package com.yishenghuo.yishenghuo.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,7 +15,7 @@ import com.yishenghuo.yishenghuo.activity.HouseKeepingActivity;
 import com.yishenghuo.yishenghuo.activity.MessageActivity;
 import com.yishenghuo.yishenghuo.activity.RepairsActivity;
 import com.yishenghuo.yishenghuo.activity.WashingActivity;
-import com.yishenghuo.yishenghuo.ui.TitleBar;
+import com.yishenghuo.yishenghuo.ui.weiget.TitleBar;
 import com.yishenghuo.yishenghuo.activity.PropertyActivity;
 import com.yishenghuo.yishenghuo.activity.WeatherActivity;
 

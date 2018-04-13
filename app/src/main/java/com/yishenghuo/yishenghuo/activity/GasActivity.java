@@ -6,7 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
 import com.yishenghuo.yishenghuo.R;
-import com.yishenghuo.yishenghuo.ui.TitleBar;
+import com.yishenghuo.yishenghuo.ui.weiget.TitleBar;
 
 public class GasActivity extends AppCompatActivity {
     private TitleBar mTitleBar;

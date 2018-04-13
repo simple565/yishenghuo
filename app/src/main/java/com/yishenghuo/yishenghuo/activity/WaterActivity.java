@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.yishenghuo.yishenghuo.R;
-import com.yishenghuo.yishenghuo.ui.TitleBar;
+import com.yishenghuo.yishenghuo.ui.weiget.TitleBar;
 //水电费缴交
 public class WaterActivity extends AppCompatActivity {
     private TitleBar mTitleBar;

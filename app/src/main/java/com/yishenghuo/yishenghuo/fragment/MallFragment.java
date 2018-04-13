@@ -11,7 +11,7 @@ import android.widget.ImageView;
 
 import com.oragee.banners.BannerView;
 import com.yishenghuo.yishenghuo.R;
-import com.yishenghuo.yishenghuo.ui.TitleBar;
+import com.yishenghuo.yishenghuo.ui.weiget.TitleBar;
 import com.yishenghuo.yishenghuo.adapter.GoodsListAdapter;
 
 import java.util.ArrayList;

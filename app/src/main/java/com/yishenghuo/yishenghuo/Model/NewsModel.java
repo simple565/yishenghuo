@@ -3,9 +3,10 @@ package com.yishenghuo.yishenghuo.Model;
 import android.util.Log;
 
 import com.yishenghuo.yishenghuo.ApiService;
+import com.yishenghuo.yishenghuo.DataManager;
 import com.yishenghuo.yishenghuo.base.BaseModel;
 import com.yishenghuo.yishenghuo.DataCallBack;
-import com.yishenghuo.yishenghuo.bean.NewsBean;
+import com.yishenghuo.yishenghuo.Model.bean.NewsBean;
 
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
@@ -19,13 +20,8 @@ public class NewsModel extends BaseModel {
     private Disposable mDisposable;
 
     public void getNews(String key, final DataCallBack <NewsBean> newsBeanDataCallBack) {
-        Retrofit retrofit = new Retrofit.Builder ()
-                .baseUrl ( ApiService.NEWS_BASE_URL )
-                .addConverterFactory ( GsonConverterFactory.create () )
-                .addCallAdapterFactory ( RxJava2CallAdapterFactory.create () )
-                .build ();
-        final ApiService apiService = retrofit.create ( ApiService.class );
-        apiService.getNewsInfo ( "头条", key )
+        DataManager.getInstance ().changeUrl ( ApiService.NEWS_BASE_URL );
+        DataManager.getInstance ().getApiService ().getNewsInfo ( "头条", key )
                 .subscribeOn ( Schedulers.io () )
                 .observeOn ( AndroidSchedulers.mainThread () )
                 .subscribe ( new Observer <NewsBean> () {

@@ -1,7 +1,6 @@
 package com.yishenghuo.yishenghuo.adapter;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +10,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.yishenghuo.yishenghuo.R;
-import com.yishenghuo.yishenghuo.bean.NeighborsBean;
+import com.yishenghuo.yishenghuo.Model.bean.NeighborsBean;
 
 import java.util.List;
 

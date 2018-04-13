@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.yishenghuo.yishenghuo.R;
-import com.yishenghuo.yishenghuo.ui.TitleBar;
+import com.yishenghuo.yishenghuo.ui.weiget.TitleBar;
 
 public class NeighborsActivity extends AppCompatActivity {
     @Override

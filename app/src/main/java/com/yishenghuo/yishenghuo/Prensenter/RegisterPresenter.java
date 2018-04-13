@@ -2,28 +2,20 @@ package com.yishenghuo.yishenghuo.Prensenter;
 
 import android.util.Log;
 
-import com.yishenghuo.yishenghuo.ApiService;
-import com.yishenghuo.yishenghuo.NetWork;
-import com.yishenghuo.yishenghuo.bean.UserBean;
+import com.yishenghuo.yishenghuo.DataManager;
+import com.yishenghuo.yishenghuo.Model.bean.UserBean;
+import com.yishenghuo.yishenghuo.base.BaseObserver;
+import com.yishenghuo.yishenghuo.base.BasePresenter;
+import com.yishenghuo.yishenghuo.base.BaseView;
 import com.yishenghuo.yishenghuo.ui.RegisterView;
-
-import java.io.IOException;
+import com.yishenghuo.yishenghuo.util.RequestBodyUtil;
 
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
-import okhttp3.Interceptor;
-import okhttp3.MediaType;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.RequestBody;
-import retrofit2.Retrofit;
-import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
-import retrofit2.converter.gson.GsonConverterFactory;
-import retrofit2.converter.scalars.ScalarsConverterFactory;
 
-public class RegisterPresenter {
+public class RegisterPresenter extends BasePresenter {
     private RegisterView mRegisterView;
     private Disposable mDisposable;
 
@@ -32,36 +24,16 @@ public class RegisterPresenter {
     }
 
     public void getVerifyCode(String phone) {
-        OkHttpClient okHttpClient = new OkHttpClient.Builder ().addInterceptor ( new Interceptor () {
-            @Override
-            public okhttp3.Response intercept(Chain chain) throws IOException {
-                Request request = chain.request ()
-                        .newBuilder ()
-                        .addHeader ( "Content-Type", "application/x-www-form-urlencoded" )
-                        .addHeader ( "Accept", "text/plain" )
-                        .build ();
-                return chain.proceed ( request );
-            }
-
-        } ).build ();
-        MediaType json = MediaType.parse ( "application/json; charset=utf-8" );
-        RequestBody requestBody = RequestBody.create ( json, phone );
-        Retrofit retrofit = new Retrofit.Builder ()
-                .baseUrl ( ApiService.BASE_URL )
-                .client ( okHttpClient )
-                .addCallAdapterFactory ( RxJava2CallAdapterFactory.create () )
-                .addConverterFactory ( ScalarsConverterFactory.create () )
-                .addConverterFactory ( GsonConverterFactory.create () )
-                .build ();
-        // 创建 网络请求接口 的实例
-        final ApiService apiService = retrofit.create ( ApiService.class );
-        apiService.getVerifyCode ( requestBody )
+        DataManager.getInstance ()
+                .getApiService ()
+                .getVerifyCode ( RequestBodyUtil.getPhone ( phone ) )
                 .subscribeOn ( Schedulers.io () )
                 .observeOn ( AndroidSchedulers.mainThread () )
                 .subscribe ( new Observer <UserBean> () {
                     @Override
                     public void onSubscribe(Disposable d) {
                         mDisposable = d;
+                        mRegisterView.startCountDown ();
                     }
 
                     @Override
@@ -81,59 +53,33 @@ public class RegisterPresenter {
                 } );
     }
 
-    public void register(String phoneAndcode) {
-        OkHttpClient okHttpClient = new OkHttpClient.Builder ().addInterceptor ( new Interceptor () {
-            @Override
-            public okhttp3.Response intercept(Chain chain) throws IOException {
-                Request request = chain.request ()
-                        .newBuilder ()
-                        .addHeader ( "Content-Type", "application/x-www-form-urlencoded" )
-                        .addHeader ( "Accept", "text/plain" )
-                        .build ();
-                return chain.proceed ( request );
-            }
-
-        } ).build ();
-        MediaType json = MediaType.parse ( "application/json; charset=utf-8" );
-        RequestBody requestBody = RequestBody.create ( json,phoneAndcode );
-        Retrofit retrofit = new Retrofit.Builder ()
-                .baseUrl ( ApiService.BASE_URL )
-                .client ( okHttpClient )
-                .addCallAdapterFactory ( RxJava2CallAdapterFactory.create () )
-                .addConverterFactory ( ScalarsConverterFactory.create () )
-                .addConverterFactory ( GsonConverterFactory.create () )
-                .build ();
-        // 创建 网络请求接口 的实例
-        final ApiService apiService = retrofit.create ( ApiService.class );
-        apiService.register ( NetWork.getRequestBody ( phoneAndcode ) )
+    public void register(String phone, String code) {
+        DataManager.getInstance ()
+                .getApiService ()
+                .register ( RequestBodyUtil.getVerifyBody ( phone, code ) )
                 .subscribeOn ( Schedulers.io () )
                 .observeOn ( AndroidSchedulers.mainThread () )
-                .subscribe ( new Observer <UserBean> () {
+                .subscribe ( new BaseObserver<UserBean> () {
                     @Override
-                    public void onSubscribe(Disposable d) {
-                        //mDisposable = d;
+                    public void onLoading() {
+
                     }
 
                     @Override
-                    public void onNext(UserBean userBean) {
-                        Log.e ( "测试", "onNext " + userBean.getCode () );
+                    public void onSuccess(UserBean userBean) {
+                        mRegisterView.showResult ( userBean );
+                        mRegisterView.saveData ( userBean );
                     }
 
                     @Override
-                    public void onError(Throwable e) {
-                        Log.e ( "测试", "onError"+mDisposable.isDisposed () );
-                    }
+                    public void onFail(Throwable e) {
 
-                    @Override
-                    public void onComplete() {
-                        Log.e ( "测试", "onComplete " + mDisposable.isDisposed () );
                     }
                 } );
     }
 
+    @Override
     public void unSubscription() {
-        if (mDisposable != null && !mDisposable.isDisposed ()) {
-            mDisposable.dispose ();
-        }
+        super.unSubscription ();
     }
 }

@@ -1,8 +1,8 @@
 package com.yishenghuo.yishenghuo.activity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -11,12 +11,9 @@ import android.widget.Toast;
 
 import com.yishenghuo.yishenghuo.Prensenter.RegisterPresenter;
 import com.yishenghuo.yishenghuo.R;
-import com.yishenghuo.yishenghuo.bean.UserBean;
+import com.yishenghuo.yishenghuo.Model.bean.UserBean;
 import com.yishenghuo.yishenghuo.ui.RegisterView;
-import com.yishenghuo.yishenghuo.ui.TitleBar;
-
-import org.json.JSONException;
-import org.json.JSONObject;
+import com.yishenghuo.yishenghuo.util.SharedPreferencesUtils;
 
 public class RegisterActivity extends AppCompatActivity implements RegisterView {
     private RegisterPresenter mRegisterPresenter;
@@ -54,7 +51,7 @@ public class RegisterActivity extends AppCompatActivity implements RegisterView 
             @Override
             public void onClick(View v) {
                 String username = edt_username.getText ().toString ();
-                mRegisterPresenter.getVerifyCode ( getPhone () );
+                mRegisterPresenter.getVerifyCode ( username );
             }
         } );
         edt_verifyceod = findViewById ( R.id.register_verification );
@@ -64,7 +61,7 @@ public class RegisterActivity extends AppCompatActivity implements RegisterView 
             public void onClick(View v) {
                 String phone = edt_username.getText ().toString ();
                 String code = edt_verifyceod.getText ().toString ();
-                mRegisterPresenter.register ( getBody ( phone, code ) );
+                mRegisterPresenter.register ( phone, code );
             }
         } );
 
@@ -78,37 +75,22 @@ public class RegisterActivity extends AppCompatActivity implements RegisterView 
     }
 
     @Override
-    public String getPhone() {
-        JSONObject jsonObject = new JSONObject ();
-        try {
-            jsonObject.put ( "phone", "18850174468" );//18959261763
-        } catch (JSONException e) {
-            e.printStackTrace ();
-        }
-        Log.e ( "测试", "getPhone: " + jsonObject.toString () );
-        return jsonObject.toString ();
-    }
+    public void startCountDown() {
 
-    @Override
-    public String getBody(String phone, String code) {
-        JSONObject jsonObject = new JSONObject ();
-        try {
-            jsonObject.put ( "phone", "18850174468" );//18959261763
-            jsonObject.put ( "code", code);
-        } catch (JSONException e) {
-            e.printStackTrace ();
-        }
-        return jsonObject.toString ();
     }
 
     @Override
     public void saveData(UserBean userBean) {
-
+        if (userBean.getCode () == 0) {
+            SharedPreferencesUtils.setParam ( this, "userID", userBean.getData ().getUser_id () );
+        }
     }
 
     @Override
     public void showResult(UserBean userBean) {
-
+        if (!userBean.getMsg ().isEmpty ()) {
+            Toast.makeText ( this, userBean.getMsg (), Toast.LENGTH_SHORT ).show ();
+        }
     }
 
     @Override

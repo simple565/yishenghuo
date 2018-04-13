@@ -1,4 +1,4 @@
-package com.yishenghuo.yishenghuo.bean;
+package com.yishenghuo.yishenghuo.Model.bean;
 
 public class DynamicItemBean {
     private long time;

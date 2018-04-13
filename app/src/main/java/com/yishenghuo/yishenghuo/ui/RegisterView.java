@@ -1,11 +1,10 @@
 package com.yishenghuo.yishenghuo.ui;
 
-import com.yishenghuo.yishenghuo.bean.UserBean;
-
+import com.yishenghuo.yishenghuo.Model.bean.UserBean;
 public interface RegisterView {
-    String getPhone();
 
-    String getBody(String phone, String code);
+    //验证码倒计时60s
+    void startCountDown();
 
     void saveData(UserBean userBean);
 

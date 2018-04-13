@@ -1,4 +1,4 @@
-package com.yishenghuo.yishenghuo.bean;
+package com.yishenghuo.yishenghuo.Model.bean;
 
 import java.util.List;
 

@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.yishenghuo.yishenghuo.bean.NewsBean;
+import com.yishenghuo.yishenghuo.Model.bean.NewsBean;
 import com.yishenghuo.yishenghuo.R;
 
 import java.util.List;

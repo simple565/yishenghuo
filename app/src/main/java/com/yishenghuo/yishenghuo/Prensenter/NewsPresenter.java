@@ -12,6 +12,10 @@ public class NewsPresenter {
         this.mNewsView = newsView;
     }
 
+    public void getNews(){
+
+    }
+
 
 
 }

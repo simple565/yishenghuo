@@ -3,7 +3,6 @@ package com.yishenghuo.yishenghuo.activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,12 +12,9 @@ import android.widget.Toast;
 import com.yishenghuo.yishenghuo.Prensenter.LoginPresenter;
 import com.yishenghuo.yishenghuo.ui.LoginView;
 import com.yishenghuo.yishenghuo.R;
-import com.yishenghuo.yishenghuo.bean.UserBean;
+import com.yishenghuo.yishenghuo.Model.bean.UserBean;
+import com.yishenghuo.yishenghuo.util.RequestBodyUtil;
 import com.yishenghuo.yishenghuo.util.SharedPreferencesUtils;
-import com.yishenghuo.yishenghuo.util.TypeUtil;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 public class LoginActivity extends AppCompatActivity implements LoginView {
     private EditText edt_username, edt_password;
@@ -47,7 +43,7 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
                 if (username.isEmpty () || password.isEmpty ()) {
                     Toast.makeText ( LoginActivity.this, "用户名密码不能为空", Toast.LENGTH_SHORT ).show ();
                 } else {
-                    mLoginPresenter.login ( getJsonBody ( username, password ) );
+                    mLoginPresenter.login ( RequestBodyUtil.getLoginBody ( username, password ) );
                 }
             }
         } );
@@ -65,33 +61,6 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
         if (!SharedPreferencesUtils.getParam ( this, "userID" ).isEmpty ()) {
             startActivity ( new Intent ( LoginActivity.this, MainActivity.class ) );
         }
-    }
-
-    //判断用户账户类型
-    public String getLoginType(String username) {
-
-        String type = "phone";
-        if (TypeUtil.isEmail ( username )) {
-            type = "phone";
-        } else if (TypeUtil.isMobile ( username )) {
-            type = "mail";
-        }
-        return type;
-    }
-
-    //将账号密码登陆类型转为json格式
-    @Override
-    public String getJsonBody(String username, String password) {
-        JSONObject object = new JSONObject ();
-        try {
-            object.put ( "login_type", getLoginType ( username ) );
-            object.put ( "username", username );
-            object.put ( "password", password );
-        } catch (JSONException e) {
-            e.printStackTrace ();
-        }
-        Log.e ( "测试", object.toString () );
-        return object.toString ();
     }
 
     @Override

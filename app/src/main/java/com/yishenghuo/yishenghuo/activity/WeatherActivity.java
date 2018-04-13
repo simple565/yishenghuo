@@ -3,7 +3,6 @@ package com.yishenghuo.yishenghuo.activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.Animation;
@@ -15,24 +14,19 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.yishenghuo.yishenghuo.bean.WeatherBean;
+import com.yishenghuo.yishenghuo.ApiService;
+import com.yishenghuo.yishenghuo.DataManager;
+import com.yishenghuo.yishenghuo.Model.bean.WeatherBean;
 import com.yishenghuo.yishenghuo.R;
 import com.yishenghuo.yishenghuo.util.LocationUtil;
 import com.yishenghuo.yishenghuo.util.WeatherUtil;
-import com.yishenghuo.yishenghuo.ApiService;
 import com.yishenghuo.yishenghuo.adapter.DayForecastAdapter;
 import com.yishenghuo.yishenghuo.adapter.SuggestionsListAdapter;
-
-import org.reactivestreams.Subscriber;
-import org.reactivestreams.Subscription;
 
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
-import retrofit2.Retrofit;
-import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class WeatherActivity extends AppCompatActivity {
 
@@ -96,35 +90,26 @@ public class WeatherActivity extends AppCompatActivity {
      * 天气数据请求
      */
     public void getWeather() {
-
-        //天气API密钥
         final String API_KEY = "424221e37aa3416da20a478cdccc3351";
-        //获取当前位置的经纬度
         final String city = LocationUtil.getLocation(this);
-        //创建Retrofit对象
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl( ApiService.WEATHER_BASE_URL) // 设置 网络请求 Url
-                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-                .addConverterFactory(GsonConverterFactory.create()) //设置使用Gson解析(记得加入依赖)
-                .build();
-        final ApiService weatherInf = retrofit.create(ApiService.class);
-        weatherInf.getWeatherInfo(city, API_KEY)
-                .subscribeOn(Schedulers.newThread())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Observer<WeatherBean> () {
+        DataManager.getInstance ().changeUrl ( ApiService.WEATHER_BASE_URL );
+        DataManager.getInstance ().getApiService ()
+                .getWeatherInfo ( city,API_KEY )
+                .subscribeOn ( Schedulers.io ())
+                .observeOn ( AndroidSchedulers.mainThread () )
+                .subscribe ( new Observer <WeatherBean> () {
                     @Override
-                    public void onSubscribe(Disposable disposable) {
-                        Log.d("TEST", Thread.currentThread().getName());
+                    public void onSubscribe(Disposable d) {
+
                     }
 
                     @Override
                     public void onNext(WeatherBean weatherBean) {
-                        showWeather(weatherBean);
-                        Log.d("TEST", Thread.currentThread().getName());
+                        showWeather ( weatherBean );
                     }
 
                     @Override
-                    public void onError(Throwable t) {
+                    public void onError(Throwable e) {
 
                     }
 
@@ -132,8 +117,7 @@ public class WeatherActivity extends AppCompatActivity {
                     public void onComplete() {
 
                     }
-                });
-
+                } );
 
     }
 

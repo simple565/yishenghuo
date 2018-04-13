@@ -8,7 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.yishenghuo.yishenghuo.bean.WeatherBean;
+import com.yishenghuo.yishenghuo.Model.bean.WeatherBean;
 import com.yishenghuo.yishenghuo.R;
 import com.yishenghuo.yishenghuo.util.WeatherUtil;
 

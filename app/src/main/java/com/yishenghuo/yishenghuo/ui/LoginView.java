@@ -1,6 +1,6 @@
 package com.yishenghuo.yishenghuo.ui;
 
-import com.yishenghuo.yishenghuo.bean.UserBean;
+import com.yishenghuo.yishenghuo.Model.bean.UserBean;
 
 /**
  * LoginActivity所需要的方法接口
@@ -10,8 +10,6 @@ import com.yishenghuo.yishenghuo.bean.UserBean;
  * 显示登录结果
  */
 public interface LoginView {
-
-    String getJsonBody(String name, String password);
 
     void saveData(UserBean userBean);
 

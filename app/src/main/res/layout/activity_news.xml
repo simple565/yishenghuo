@@ -6,7 +6,7 @@
     android:orientation="vertical"
     tools:context="com.yishenghuo.yishenghuo.activity.NewsActivity">
 
-    <com.yishenghuo.yishenghuo.ui.TitleBar
+    <com.yishenghuo.yishenghuo.ui.weiget.TitleBar
         android:id="@+id/news_titlebar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/titlebar"
