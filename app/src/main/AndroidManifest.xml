@@ -26,10 +26,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".activity.LoginActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <activity android:name=".activity.MainActivity"
@@ -37,7 +33,10 @@
 
         </activity>
         <activity android:name=".activity.RegisterActivity" >
-
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".activity.MessageActivity" />
         <activity android:name=".activity.WeatherActivity" />
@@ -61,6 +60,11 @@
         <activity android:name=".activity.DynamicActivity" />
         <activity android:name=".activity.NeighborsActivity" />
         <activity android:name=".activity.CommunityActivity" />
+        <activity android:name=".activity.Electric_applyActivity"/>
+        <activity android:name=".activity.Propery_applyActivity"/>
+        <activity android:name=".activity.Gas_applyActivity"/>
+        <activity android:name=".activity.Park_applyActivity"/>
+        <activity android:name=".activity.Water_applyActivity"/>
     </application>
 
 </manifest>

@@ -3,6 +3,7 @@ package com.yishenghuo.yishenghuo.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,19 +11,24 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.yishenghuo.yishenghuo.R;
+import com.yishenghuo.yishenghuo.activity.Electric_applyActivity;
 import com.yishenghuo.yishenghuo.activity.EntranceActivity;
+import com.yishenghuo.yishenghuo.activity.Gas_applyActivity;
 import com.yishenghuo.yishenghuo.activity.HouseKeepingActivity;
 import com.yishenghuo.yishenghuo.activity.MessageActivity;
+import com.yishenghuo.yishenghuo.activity.Park_applyActivity;
+import com.yishenghuo.yishenghuo.activity.Propery_applyActivity;
 import com.yishenghuo.yishenghuo.activity.RepairsActivity;
 import com.yishenghuo.yishenghuo.activity.WashingActivity;
-import com.yishenghuo.yishenghuo.ui.weiget.TitleBar;
+import com.yishenghuo.yishenghuo.activity.Water_applyActivity;
+import com.yishenghuo.yishenghuo.ui.TitleBar;
 import com.yishenghuo.yishenghuo.activity.PropertyActivity;
 import com.yishenghuo.yishenghuo.activity.WeatherActivity;
 
 
 public class ServiceFragment extends Fragment implements View.OnClickListener {
     private TextView mtv_houserkeeping, mtv_entrance;
-    private TextView mtv_property;
+    private TextView mtv_property,mtv_gas,mtv_water,mtv_parking,mtv_electric;
     private TextView mtv_weather;
 
     public ServiceFragment() {
@@ -54,7 +60,14 @@ public class ServiceFragment extends Fragment implements View.OnClickListener {
         mtv_property.setOnClickListener(this);
         mtv_weather = (TextView) view.findViewById(R.id.service_tv_weatherquery);
         mtv_weather.setOnClickListener(this);
-
+       mtv_gas = (TextView)view.findViewById(R.id.service_tv_gasfee);
+       mtv_gas.setOnClickListener(this);
+       mtv_water = (TextView)view.findViewById(R.id.service_tv_water);
+       mtv_water.setOnClickListener(this);
+       mtv_parking = (TextView)view.findViewById(R.id.service_tv_parkingfee);
+       mtv_parking.setOnClickListener(this);
+       mtv_electric = (TextView)view.findViewById(R.id.service_tv_electric);
+       mtv_electric.setOnClickListener(this);
 
     }
 
@@ -76,12 +89,23 @@ public class ServiceFragment extends Fragment implements View.OnClickListener {
                 //startActivity(new Intent(getActivity(), ));
                 break;
             case R.id.service_tv_propertyfee:
-                startActivity(new Intent(getActivity(), PropertyActivity.class));
+                startActivity(new Intent(getActivity(), Propery_applyActivity.class));
                 break;
             case R.id.service_tv_weatherquery:
                 startActivity(new Intent(getActivity(), WeatherActivity.class));
                 break;
-
+            case  R.id.service_tv_gasfee:
+                startActivity(new Intent(getActivity(), Gas_applyActivity.class));
+                break;
+            case R.id.service_tv_water:
+                startActivity(new Intent(getActivity(), Water_applyActivity.class));
+                break;
+            case  R.id.service_tv_parkingfee:
+                startActivity(new Intent(getActivity(), Park_applyActivity.class));
+                break;
+            case  R.id.service_tv_electric:
+                startActivity(new Intent(getActivity(), Electric_applyActivity.class));
+                break;
             default:
                 break;
         }
