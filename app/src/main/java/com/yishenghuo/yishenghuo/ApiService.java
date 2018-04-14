@@ -13,7 +13,7 @@ import retrofit2.http.POST;
 import retrofit2.http.Query;
 
 /**
- * 天气查询接口
+ * 接口集合
  */
 public interface ApiService {
 
