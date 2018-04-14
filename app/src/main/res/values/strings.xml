@@ -134,6 +134,10 @@
     <string name="recharge">充值金额</string>
     <string name="recharge_money">请输入充值金额</string>
     <string name="pay_now">立即缴费</string>
+    <string name="apply">请输入用户号</string>
+    <string name="apply_username">用户号为8位数字，不足8为前面请补0</string>
+    <string name="protocol">我已阅读同意《支付宝自助缴费协议》</string>
+    <string name="the_next">下一步</string>
     <!--物业-->
     <string name="repair_problem">报修问题</string>
     <string name="submit">提交</string>
