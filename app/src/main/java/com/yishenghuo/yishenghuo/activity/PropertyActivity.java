@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.yishenghuo.yishenghuo.R;
-import com.yishenghuo.yishenghuo.ui.weiget.TitleBar;
+import com.yishenghuo.yishenghuo.ui.TitleBar;
 
 //物业缴费
 public class PropertyActivity extends AppCompatActivity {

@@ -3,7 +3,6 @@ package com.yishenghuo.yishenghuo.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,18 +10,17 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.yishenghuo.yishenghuo.R;
-import com.yishenghuo.yishenghuo.activity.Electric_applyActivity;
+import com.yishenghuo.yishenghuo.activity.ElectricApplyActivity;
 import com.yishenghuo.yishenghuo.activity.EntranceActivity;
-import com.yishenghuo.yishenghuo.activity.Gas_applyActivity;
+import com.yishenghuo.yishenghuo.activity.GasApplyActivity;
 import com.yishenghuo.yishenghuo.activity.HouseKeepingActivity;
 import com.yishenghuo.yishenghuo.activity.MessageActivity;
-import com.yishenghuo.yishenghuo.activity.Park_applyActivity;
-import com.yishenghuo.yishenghuo.activity.Propery_applyActivity;
+import com.yishenghuo.yishenghuo.activity.ParkApplyActivity;
+import com.yishenghuo.yishenghuo.activity.PropertyApplyActivity;
 import com.yishenghuo.yishenghuo.activity.RepairsActivity;
 import com.yishenghuo.yishenghuo.activity.WashingActivity;
 import com.yishenghuo.yishenghuo.activity.Water_applyActivity;
 import com.yishenghuo.yishenghuo.ui.TitleBar;
-import com.yishenghuo.yishenghuo.activity.PropertyActivity;
 import com.yishenghuo.yishenghuo.activity.WeatherActivity;
 
 
@@ -89,22 +87,22 @@ public class ServiceFragment extends Fragment implements View.OnClickListener {
                 //startActivity(new Intent(getActivity(), ));
                 break;
             case R.id.service_tv_propertyfee:
-                startActivity(new Intent(getActivity(), Propery_applyActivity.class));
+                startActivity(new Intent(getActivity(), PropertyApplyActivity.class));
                 break;
             case R.id.service_tv_weatherquery:
                 startActivity(new Intent(getActivity(), WeatherActivity.class));
                 break;
             case  R.id.service_tv_gasfee:
-                startActivity(new Intent(getActivity(), Gas_applyActivity.class));
+                startActivity(new Intent(getActivity(), GasApplyActivity.class));
                 break;
             case R.id.service_tv_water:
                 startActivity(new Intent(getActivity(), Water_applyActivity.class));
                 break;
             case  R.id.service_tv_parkingfee:
-                startActivity(new Intent(getActivity(), Park_applyActivity.class));
+                startActivity(new Intent(getActivity(), ParkApplyActivity.class));
                 break;
             case  R.id.service_tv_electric:
-                startActivity(new Intent(getActivity(), Electric_applyActivity.class));
+                startActivity(new Intent(getActivity(), ElectricApplyActivity.class));
                 break;
             default:
                 break;

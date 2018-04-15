@@ -9,7 +9,7 @@ import android.widget.Button;
 import com.yishenghuo.yishenghuo.R;
 import com.yishenghuo.yishenghuo.ui.TitleBar;
 
-public class Gas_applyActivity extends AppCompatActivity {
+public class GasApplyActivity extends AppCompatActivity {
 
     private TitleBar mTitleBar;
     private Button gas_next;
@@ -26,7 +26,7 @@ public class Gas_applyActivity extends AppCompatActivity {
         gas_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Gas_applyActivity.this,GasActivity.class);
+                Intent intent = new Intent(GasApplyActivity.this,GasActivity.class);
                 startActivity(intent);
             }
         });

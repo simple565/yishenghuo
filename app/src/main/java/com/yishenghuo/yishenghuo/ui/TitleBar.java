@@ -1,4 +1,4 @@
-package com.yishenghuo.yishenghuo.ui.weiget;
+package com.yishenghuo.yishenghuo.ui;
 
 import android.content.Context;
 import android.content.Intent;

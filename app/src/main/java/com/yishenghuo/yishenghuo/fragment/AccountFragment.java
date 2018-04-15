@@ -11,7 +11,7 @@ import android.widget.Button;
 
 import com.yishenghuo.yishenghuo.R;
 import com.yishenghuo.yishenghuo.activity.SettingActivity;
-import com.yishenghuo.yishenghuo.ui.weiget.TitleBar;
+import com.yishenghuo.yishenghuo.ui.TitleBar;
 
 public class AccountFragment extends Fragment {
     private TitleBar mTitleBar;

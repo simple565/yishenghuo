@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.ListView;
 
 import com.yishenghuo.yishenghuo.R;
-import com.yishenghuo.yishenghuo.ui.weiget.TitleBar;
+import com.yishenghuo.yishenghuo.ui.TitleBar;
 
 public class CommunityActivity extends AppCompatActivity {
     private ListView mListView;

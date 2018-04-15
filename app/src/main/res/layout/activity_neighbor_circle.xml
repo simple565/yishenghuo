@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context="com.yishenghuo.yishenghuo.activity.NeighborCircleActivity">
 
-    <com.yishenghuo.yishenghuo.ui.weiget.TitleBar
+    <com.yishenghuo.yishenghuo.ui.TitleBar
         android:id="@+id/neighbor_circle_titlebar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/titlebar"

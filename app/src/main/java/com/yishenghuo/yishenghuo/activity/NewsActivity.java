@@ -12,7 +12,7 @@ import com.yishenghuo.yishenghuo.ApiService;
 import com.yishenghuo.yishenghuo.DataManager;
 import com.yishenghuo.yishenghuo.Model.bean.NewsBean;
 import com.yishenghuo.yishenghuo.R;
-import com.yishenghuo.yishenghuo.ui.weiget.TitleBar;
+import com.yishenghuo.yishenghuo.ui.TitleBar;
 import com.yishenghuo.yishenghuo.adapter.NewsAdaptor;
 
 import io.reactivex.Observer;

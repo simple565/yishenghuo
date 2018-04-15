@@ -4,7 +4,7 @@
     android:background="@color/page_background"
     android:orientation="vertical">
 
-    <com.yishenghuo.yishenghuo.ui.weiget.TitleBar
+    <com.yishenghuo.yishenghuo.ui.TitleBar
         android:id="@+id/service_repairs_titlebar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/titlebar"

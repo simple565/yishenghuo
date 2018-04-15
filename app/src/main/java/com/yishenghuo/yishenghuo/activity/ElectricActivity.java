@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.yishenghuo.yishenghuo.R;
-import com.yishenghuo.yishenghuo.ui.weiget.TitleBar;
+import com.yishenghuo.yishenghuo.ui.TitleBar;
 
 public class ElectricActivity extends AppCompatActivity {
     private TitleBar mTitleBar;

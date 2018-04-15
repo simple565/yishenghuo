@@ -9,7 +9,7 @@ import android.widget.Button;
 import com.yishenghuo.yishenghuo.R;
 import com.yishenghuo.yishenghuo.ui.TitleBar;
 
-public class Park_applyActivity extends AppCompatActivity {
+public class ParkApplyActivity extends AppCompatActivity {
 
     private TitleBar mTitleBar;
     private Button park_next;
@@ -26,7 +26,7 @@ public class Park_applyActivity extends AppCompatActivity {
         park_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Park_applyActivity.this,ParkActivity.class);
+                Intent intent = new Intent(ParkApplyActivity.this,ParkActivity.class);
                 startActivity(intent);
             }
         });

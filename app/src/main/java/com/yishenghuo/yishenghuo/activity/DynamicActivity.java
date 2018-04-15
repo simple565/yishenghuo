@@ -9,7 +9,7 @@ import android.widget.ListView;
 import com.yishenghuo.yishenghuo.R;
 import com.yishenghuo.yishenghuo.adapter.DynamicAdapter;
 import com.yishenghuo.yishenghuo.Model.bean.DynamicItemBean;
-import com.yishenghuo.yishenghuo.ui.weiget.TitleBar;
+import com.yishenghuo.yishenghuo.ui.TitleBar;
 
 import java.util.List;
 

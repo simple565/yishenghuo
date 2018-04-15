@@ -26,17 +26,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".activity.LoginActivity">
+
         </activity>
 
-        <activity android:name=".activity.MainActivity"
+        <activity
+            android:name=".activity.MainActivity"
             android:windowSoftInputMode="stateHidden">
-
-        </activity>
-        <activity android:name=".activity.RegisterActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".activity.RegisterActivity">
+
         </activity>
         <activity android:name=".activity.MessageActivity" />
         <activity android:name=".activity.WeatherActivity" />
@@ -54,17 +56,17 @@
         <activity android:name=".activity.WashingActivity" />
         <activity android:name=".activity.EntranceActivity" />
         <activity android:name=".activity.GuesscomeActivity" />
-        <activity android:name=".activity.Building_settingActivity" />
+        <activity android:name=".activity.BuildingSettingActivity" />
         <activity android:name=".activity.SettingActivity" />
         <activity android:name=".activity.FeedbackActivity" />
         <activity android:name=".activity.DynamicActivity" />
         <activity android:name=".activity.NeighborsActivity" />
         <activity android:name=".activity.CommunityActivity" />
-        <activity android:name=".activity.Electric_applyActivity"/>
-        <activity android:name=".activity.Propery_applyActivity"/>
-        <activity android:name=".activity.Gas_applyActivity"/>
-        <activity android:name=".activity.Park_applyActivity"/>
-        <activity android:name=".activity.Water_applyActivity"/>
+        <activity android:name=".activity.ElectricApplyActivity" />
+        <activity android:name=".activity.PropertyApplyActivity" />
+        <activity android:name=".activity.GasApplyActivity" />
+        <activity android:name=".activity.ParkApplyActivity" />
+        <activity android:name=".activity.Water_applyActivity" />
     </application>
 
 </manifest>

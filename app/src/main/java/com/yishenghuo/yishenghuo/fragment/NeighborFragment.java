@@ -17,7 +17,7 @@ import com.yishenghuo.yishenghuo.R;
 import com.yishenghuo.yishenghuo.activity.DynamicActivity;
 import com.yishenghuo.yishenghuo.activity.NeighborCircleActivity;
 import com.yishenghuo.yishenghuo.activity.NeighborsActivity;
-import com.yishenghuo.yishenghuo.ui.weiget.TitleBar;
+import com.yishenghuo.yishenghuo.ui.TitleBar;
 import com.yishenghuo.yishenghuo.activity.NewsActivity;
 
 import java.util.ArrayList;
