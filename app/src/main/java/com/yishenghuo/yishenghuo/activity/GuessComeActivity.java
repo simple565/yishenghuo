@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import com.yishenghuo.yishenghuo.R;
 import com.yishenghuo.yishenghuo.ui.TitleBar;
 
-public class GuesscomeActivity extends AppCompatActivity {
+public class GuessComeActivity extends AppCompatActivity {
 
     private TitleBar mTitleBar;
 

@@ -55,7 +55,7 @@
         <activity android:name=".activity.ServiceRepairsActivity" />
         <activity android:name=".activity.WashingActivity" />
         <activity android:name=".activity.EntranceActivity" />
-        <activity android:name=".activity.GuesscomeActivity" />
+        <activity android:name=".activity.GuessComeActivity" />
         <activity android:name=".activity.BuildingSettingActivity" />
         <activity android:name=".activity.SettingActivity" />
         <activity android:name=".activity.FeedbackActivity" />
@@ -66,7 +66,7 @@
         <activity android:name=".activity.PropertyApplyActivity" />
         <activity android:name=".activity.GasApplyActivity" />
         <activity android:name=".activity.ParkApplyActivity" />
-        <activity android:name=".activity.Water_applyActivity" />
+        <activity android:name=".activity.WaterApplyActivity" />
     </application>
 
 </manifest>

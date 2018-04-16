@@ -21,7 +21,7 @@ public class PropertyApplyActivity extends AppCompatActivity {
 
         iniView();
 
-        property_next = (Button)findViewById(R.id.water_the_next);
+        property_next = (Button)findViewById(R.id.property_the_next);
 
         property_next.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -21,7 +21,7 @@ public class GasApplyActivity extends AppCompatActivity {
 
         iniView();
 
-        gas_next = (Button)findViewById(R.id.water_the_next);
+        gas_next = (Button)findViewById(R.id.gas_the_next);
 
         gas_next.setOnClickListener(new View.OnClickListener() {
             @Override

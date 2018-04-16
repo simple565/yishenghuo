@@ -21,7 +21,7 @@ public class ParkApplyActivity extends AppCompatActivity {
 
         iniView();
 
-        park_next = (Button)findViewById(R.id.water_the_next);
+        park_next = (Button)findViewById(R.id.park_the_next);
 
         park_next.setOnClickListener(new View.OnClickListener() {
             @Override

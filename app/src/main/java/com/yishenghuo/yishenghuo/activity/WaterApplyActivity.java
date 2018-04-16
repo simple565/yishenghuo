@@ -9,7 +9,7 @@ import android.widget.Button;
 import com.yishenghuo.yishenghuo.R;
 import com.yishenghuo.yishenghuo.ui.TitleBar;
 
-public class Water_applyActivity extends AppCompatActivity {
+public class WaterApplyActivity extends AppCompatActivity {
 
     private TitleBar mTitleBar;
     private Button  water_next;
@@ -25,7 +25,7 @@ public class Water_applyActivity extends AppCompatActivity {
         water_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Water_applyActivity.this,WaterActivity.class);
+                Intent intent = new Intent(WaterApplyActivity.this,WaterActivity.class);
                 startActivity(intent);
             }
         });

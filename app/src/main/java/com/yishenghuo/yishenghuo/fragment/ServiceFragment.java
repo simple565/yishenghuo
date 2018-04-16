@@ -19,13 +19,13 @@ import com.yishenghuo.yishenghuo.activity.ParkApplyActivity;
 import com.yishenghuo.yishenghuo.activity.PropertyApplyActivity;
 import com.yishenghuo.yishenghuo.activity.RepairsActivity;
 import com.yishenghuo.yishenghuo.activity.WashingActivity;
-import com.yishenghuo.yishenghuo.activity.Water_applyActivity;
+import com.yishenghuo.yishenghuo.activity.WaterApplyActivity;
 import com.yishenghuo.yishenghuo.ui.TitleBar;
 import com.yishenghuo.yishenghuo.activity.WeatherActivity;
 
 
 public class ServiceFragment extends Fragment implements View.OnClickListener {
-    private TextView mtv_houserkeeping, mtv_entrance;
+    private TextView mtv_housekeeping, mtv_entrance;
     private TextView mtv_property,mtv_gas,mtv_water,mtv_parking,mtv_electric;
     private TextView mtv_weather;
 
@@ -50,8 +50,8 @@ public class ServiceFragment extends Fragment implements View.OnClickListener {
                 startActivity(new Intent(getActivity(), MessageActivity.class));
             }
         });
-        mtv_houserkeeping = (TextView) view.findViewById(R.id.service_tv_housekeeping);
-        mtv_houserkeeping.setOnClickListener(this);
+        mtv_housekeeping = (TextView) view.findViewById(R.id.service_tv_housekeeping);
+        mtv_housekeeping.setOnClickListener(this);
         mtv_entrance = (TextView) view.findViewById(R.id.service_tv_entrance);
         mtv_entrance.setOnClickListener(this);
         mtv_property = (TextView) view.findViewById(R.id.service_tv_propertyfee);
@@ -96,7 +96,7 @@ public class ServiceFragment extends Fragment implements View.OnClickListener {
                 startActivity(new Intent(getActivity(), GasApplyActivity.class));
                 break;
             case R.id.service_tv_water:
-                startActivity(new Intent(getActivity(), Water_applyActivity.class));
+                startActivity(new Intent(getActivity(), WaterApplyActivity.class));
                 break;
             case  R.id.service_tv_parkingfee:
                 startActivity(new Intent(getActivity(), ParkApplyActivity.class));
