@@ -21,4 +21,6 @@
     <dimen name="account_order_padding">10dp</dimen>
     <dimen name="account_button_quit">200dp</dimen>
 
+    <dimen name="setting_layout_height">50dp</dimen>
+
 </resources>

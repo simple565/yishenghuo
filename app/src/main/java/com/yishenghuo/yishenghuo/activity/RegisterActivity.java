@@ -61,7 +61,8 @@ public class RegisterActivity extends AppCompatActivity implements RegisterView 
             public void onClick(View v) {
                 String phone = edt_username.getText ().toString ();
                 String code = edt_verifyceod.getText ().toString ();
-                mRegisterPresenter.register ( phone, code );
+                String password = edt_password.getText ().toString ();
+                mRegisterPresenter.register ( phone, code, password );
             }
         } );
 

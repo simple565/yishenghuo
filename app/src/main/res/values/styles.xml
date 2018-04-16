@@ -15,26 +15,28 @@
         <item name="android:paddingEnd">10dp</item>
         <item name="android:textColor">@color/white</item>
     </style>
-
+    <!--服务 标题文字-->
     <style name="service_list_title">
         <item name="android:textColor">@color/title_color</item>
         <item name="android:textStyle">bold|italic</item>
         <item name="android:textSize">20sp</item>
         <item name="android:layout_marginStart">15dp</item>
     </style>
-
+    <!--服务 文字-->
     <style name="service_list_text">
         <item name="android:textSize">15sp</item>
         <item name="android:layout_marginStart">10dp</item>
         <item name="android:textStyle">bold</item>
     </style>
 
+    <!--商城 导航栏-->
     <style name="mall_list_item">
         <item name="android:textSize">15sp</item>
         <item name="android:gravity">center_horizontal</item>
         <item name="android:background">@color/white</item>
     </style>
 
+    <!--我的 标题文字-->
     <style name="account_list_title">
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/title_color</item>
@@ -56,9 +58,22 @@
         <item name="android:paddingBottom">10dp</item>
     </style>
 
-    <!--各个缴费页面选项中textview-->
+    <!--各个缴费页面选项中文字-->
     <style name="charge_list_text">
         <item name="android:layout_marginBottom">12dp</item>
         <item name="android:textSize">18sp</item>
+    </style>
+
+    <!--设置 文字-->
+    <style name="setting_text">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!--设置 每栏样式-->
+    <style name="setting_layout">
+        <item name="android:padding">10dp</item>
+        <item name="android:layout_marginTop">@dimen/activity_vertical_margin</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:gravity">center_vertical</item>
     </style>
 </resources>

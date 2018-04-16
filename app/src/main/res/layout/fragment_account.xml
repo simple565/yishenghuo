@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:background="@color/page_background"
-              android:orientation="vertical">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_background"
+    android:orientation="vertical">
 
     <com.yishenghuo.yishenghuo.ui.TitleBar
         android:id="@+id/account_titlebar"
+        style="@style/titlebar"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/titlebar"
-        android:background="@drawable/title_background"
-        android:paddingEnd="10dp"
-        android:paddingStart="10dp"/>
+        android:layout_height="@dimen/titlebar" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,15 +22,15 @@
             android:id="@+id/account_iv_favicon"
             android:layout_width="@dimen/favicon"
             android:layout_height="@dimen/favicon"
-            android:background="@drawable/my_favicon"/>
+            android:background="@drawable/my_favicon" />
 
         <TextView
             android:id="@+id/account_tv_nickname"
             style="@style/nickname"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="皮卡皮卡丘"/>
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:text="皮卡皮卡丘" />
     </LinearLayout>
 
     <LinearLayout
@@ -47,12 +45,12 @@
             style="@style/account_list_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/my_order"/>
+            android:text="@string/my_order" />
 
         <include
             layout="@layout/account_list_order"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
     <LinearLayout
@@ -68,24 +66,63 @@
             style="@style/account_list_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/my_life"/>
+            android:text="@string/my_life" />
 
         <include
             layout="@layout/account_list_life"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
+    <RelativeLayout
+        android:id="@+id/account_feedback"
+        style="@style/setting_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10sp"
+            android:text="@string/feedback"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="23sp"
+            android:layout_height="23sp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/ic_arrow_right" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/account_about_us"
+        style="@style/setting_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/about_us"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/ic_arrow_right" />
+
+    </RelativeLayout>
 
     <Button
         android:id="@+id/account_btn_quit"
         android:layout_width="@dimen/account_button_quit"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/account_quit_backgound"
         android:text="@string/quit"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white" />
 </LinearLayout>
 

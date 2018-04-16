@@ -38,6 +38,7 @@ public class RegisterPresenter extends BasePresenter {
 
                     @Override
                     public void onNext(UserBean userBean) {
+                        mRegisterView.showResult ( userBean );
                         Log.e ( "测试", "onNext " + userBean.getCode () );
                     }
 
@@ -53,13 +54,13 @@ public class RegisterPresenter extends BasePresenter {
                 } );
     }
 
-    public void register(String phone, String code) {
+    public void register(String phone, String code, String password) {
         DataManager.getInstance ()
                 .getApiService ()
                 .register ( RequestBodyUtil.getVerifyBody ( phone, code ) )
                 .subscribeOn ( Schedulers.io () )
                 .observeOn ( AndroidSchedulers.mainThread () )
-                .subscribe ( new BaseObserver<UserBean> () {
+                .subscribe ( new BaseObserver <UserBean> () {
                     @Override
                     public void onLoading() {
 

@@ -31,14 +31,17 @@ public interface ApiService {
     @POST("login_page")
     Observable <UserBean> getUser(@Body RequestBody body);//application/json; charset=utf-8
 
+    //获取验证码
     @Headers({"Content-Type:application/x-www-form-urlencoded", "Accept:text/plain"})
     @POST("register")
     Observable <UserBean> getVerifyCode(@Body RequestBody body);
 
+    //匹配手机和验证码
     @Headers({"Content-Type:application/x-www-form-urlencoded", "Accept:text/plain"})
     @POST("register_verify_code")
     Observable <UserBean> register(@Body RequestBody body);
 
+    //设置用户名和密码 。
     @Headers({"Content-Type:application/x-www-form-urlencoded", "Accept:text/plain"})
     @POST("register_setpasswd")
     Observable <UserBean> setPassword(@Body RequestBody body);
