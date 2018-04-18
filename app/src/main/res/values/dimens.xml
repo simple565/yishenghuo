@@ -5,7 +5,7 @@
     <dimen name="dot_horizontal_margin">8dp</dimen>
     <dimen name="dot_paddingbottom">5dp</dimen>
     <dimen name="navigationbar">48dp</dimen>
-    <dimen name="navigation_icon">40dp</dimen>
+    <dimen name="navigation_icon">36dp</dimen>
     <dimen name="navigation_horizontal_margin">40dp</dimen>
 
     <dimen name="titlebar">40dp</dimen>

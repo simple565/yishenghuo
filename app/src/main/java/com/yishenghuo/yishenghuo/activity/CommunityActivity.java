@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
 
+import com.yishenghuo.yishenghuo.Neighborhood.MessageActivity;
 import com.yishenghuo.yishenghuo.R;
 import com.yishenghuo.yishenghuo.ui.TitleBar;
 

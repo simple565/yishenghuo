@@ -25,7 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:background="@drawable/ic_add" />
+            android:background="@drawable/ic_add_black" />
 
         <ImageView
             android:id="@+id/item_neighbors_iv_chat"

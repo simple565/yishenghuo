@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.view.MenuCompat;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,8 +13,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.yishenghuo.yishenghuo.R;
-import com.yishenghuo.yishenghuo.activity.MessageActivity;
-import com.yishenghuo.yishenghuo.adapter.NeighborsAdaptor;
+import com.yishenghuo.yishenghuo.Neighborhood.MessageActivity;
 
 /**
  * 自定义顶部标题栏，包含标题，消息按钮
@@ -54,7 +52,7 @@ public class TitleBar extends RelativeLayout {
 
         btn_left = new ImageButton(getContext());
         btn_right = new ImageButton(getContext());
-        btn_right.setBackgroundResource(R.drawable.ic_message);//默认为message图标
+        btn_right.setBackgroundResource(R.drawable.ic_message_white );//默认为message图标
         btn_right.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -80,6 +78,11 @@ public class TitleBar extends RelativeLayout {
     //设置右边button
     public void setRightButton(@DrawableRes int id) {
         btn_right.setBackgroundResource(id);
+    }
+
+    //设置返回按键
+    public void setHomeIcon(){
+        btn_left.setBackgroundResource ( R.drawable.ic_arrow_left );
     }
 
     //设置左边button

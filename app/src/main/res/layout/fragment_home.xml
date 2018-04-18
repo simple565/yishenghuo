@@ -24,7 +24,7 @@
             android:layout_width="250dp"
             android:layout_height="30dp"
             android:layout_centerInParent="true"
-            android:background="@drawable/home_edittext_background"
+            android:background="@drawable/home_edt_bg"
             android:cursorVisible="false"
             android:drawableStart="@drawable/ic_search"
             android:paddingEnd="10dp"
@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            android:background="@drawable/ic_message" />
+            android:background="@drawable/ic_message_white" />
 
     </RelativeLayout>
 
@@ -88,6 +88,41 @@
             android:layout_weight="1"
             android:scaleType="fitCenter"
             android:src="@drawable/home_repair" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/entrance_system" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/notification" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/property_charge" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/property_repair" />
+
     </LinearLayout>
 
     <LinearLayout

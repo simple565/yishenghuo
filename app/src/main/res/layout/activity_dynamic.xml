@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/page_background"
     android:orientation="vertical"
-    tools:context="com.yishenghuo.yishenghuo.activity.DynamicActivity">
+    tools:context="com.yishenghuo.yishenghuo.Neighborhood.DynamicActivity">
 
     <com.yishenghuo.yishenghuo.ui.TitleBar
         android:id="@+id/dynamic_titlebar"

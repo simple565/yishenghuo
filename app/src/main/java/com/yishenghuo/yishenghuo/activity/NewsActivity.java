@@ -11,6 +11,7 @@ import android.widget.ListView;
 import com.yishenghuo.yishenghuo.ApiService;
 import com.yishenghuo.yishenghuo.DataManager;
 import com.yishenghuo.yishenghuo.Model.bean.NewsBean;
+import com.yishenghuo.yishenghuo.Neighborhood.MessageActivity;
 import com.yishenghuo.yishenghuo.R;
 import com.yishenghuo.yishenghuo.ui.TitleBar;
 import com.yishenghuo.yishenghuo.adapter.NewsAdaptor;

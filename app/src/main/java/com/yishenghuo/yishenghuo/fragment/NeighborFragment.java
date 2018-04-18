@@ -14,9 +14,9 @@ import android.widget.Toast;
 
 import com.oragee.banners.BannerView;
 import com.yishenghuo.yishenghuo.R;
-import com.yishenghuo.yishenghuo.activity.DynamicActivity;
-import com.yishenghuo.yishenghuo.activity.NeighborCircleActivity;
-import com.yishenghuo.yishenghuo.activity.NeighborsActivity;
+import com.yishenghuo.yishenghuo.Neighborhood.DynamicActivity;
+import com.yishenghuo.yishenghuo.Neighborhood.NeighborCircleActivity;
+import com.yishenghuo.yishenghuo.Neighborhood.NeighborsActivity;
 import com.yishenghuo.yishenghuo.ui.TitleBar;
 import com.yishenghuo.yishenghuo.activity.NewsActivity;
 

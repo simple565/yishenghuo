@@ -1,4 +1,4 @@
-package com.yishenghuo.yishenghuo.activity;
+package com.yishenghuo.yishenghuo.Neighborhood;
 
 import android.content.Intent;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -10,6 +10,10 @@ import android.widget.RelativeLayout;
 import com.yishenghuo.yishenghuo.R;
 import com.yishenghuo.yishenghuo.ui.TitleBar;
 
+/**
+ * author Lian
+ * Description 邻居圈
+ */
 public class NeighborCircleActivity extends AppCompatActivity {
     private SwipeRefreshLayout mSwipeRefreshLayout;
     private RelativeLayout mRelativeLayout;

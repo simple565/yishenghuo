@@ -1,17 +1,13 @@
 package com.yishenghuo.yishenghuo.fragment;
 
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.GridView;
@@ -26,7 +22,7 @@ import com.oragee.banners.BannerView;
 import com.yishenghuo.yishenghuo.R;
 import com.yishenghuo.yishenghuo.activity.EntranceActivity;
 import com.yishenghuo.yishenghuo.activity.LoginActivity;
-import com.yishenghuo.yishenghuo.activity.MessageActivity;
+import com.yishenghuo.yishenghuo.Neighborhood.MessageActivity;
 import com.yishenghuo.yishenghuo.adapter.GoodsListAdapter;
 
 import java.util.ArrayList;

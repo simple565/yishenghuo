@@ -1,4 +1,4 @@
-package com.yishenghuo.yishenghuo.activity;
+package com.yishenghuo.yishenghuo.Neighborhood;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +12,10 @@ import com.yishenghuo.yishenghuo.Model.bean.DynamicItemBean;
 import com.yishenghuo.yishenghuo.ui.TitleBar;
 
 import java.util.List;
+/**
+ * author Lian
+ * Description 小区动态
+ */
 
 public class DynamicActivity extends AppCompatActivity {
     private ListView mListView;

@@ -28,12 +28,14 @@
 
     <!--首页-->
     <string name="title_home">首页</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
     <string name="title_service">服务</string>
     <string name="title_neighbor">邻里</string>
     <string name="title_mall">商城</string>
     <string name="title_account">我的</string>
+    <string name="entrance_system">门禁系统</string>
+    <string name="notification">物业通知</string>
+    <string name="property_charge">物业缴费</string>
+    <string name="property_repair">物业维修</string>
     <string name="hot">【今日热点】</string>
     <string name="on_sale">【今日特价】</string>
 
@@ -183,4 +185,11 @@
     <string name="choose_unit">选择单元</string>
     <string name="choose_floor">选择楼层</string>
 
+    <!--消息-->
+    <string name="message">消息</string>
+    <string name="friends_list">好友列表</string>
+    <string name="add_neighbors">添加好友</string>
+    <string name="start_chat">发起聊天</string>
+    <string name="chose_friend">选择好友</string>
+    <string name="scan">扫一扫</string>
 </resources>

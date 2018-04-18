@@ -14,7 +14,7 @@ import com.yishenghuo.yishenghuo.activity.ElectricApplyActivity;
 import com.yishenghuo.yishenghuo.activity.EntranceActivity;
 import com.yishenghuo.yishenghuo.activity.GasApplyActivity;
 import com.yishenghuo.yishenghuo.activity.HouseKeepingActivity;
-import com.yishenghuo.yishenghuo.activity.MessageActivity;
+import com.yishenghuo.yishenghuo.Neighborhood.MessageActivity;
 import com.yishenghuo.yishenghuo.activity.ParkApplyActivity;
 import com.yishenghuo.yishenghuo.activity.PropertyApplyActivity;
 import com.yishenghuo.yishenghuo.activity.RepairsActivity;

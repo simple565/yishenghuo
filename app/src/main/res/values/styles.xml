@@ -8,8 +8,14 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!--搜索框-->
+    <style name="SearchView">
+        <item name="android:background">@drawable/home_edt_bg</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
     <!--每个页面的标题栏-->
-    <style name="titlebar">
+    <style name="TitleBar">
         <item name="android:background">@color/title_color</item>
         <item name="android:paddingStart">10dp</item>
         <item name="android:paddingEnd">10dp</item>
