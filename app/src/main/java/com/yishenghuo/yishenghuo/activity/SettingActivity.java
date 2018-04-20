@@ -7,17 +7,31 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
+import com.yishenghuo.yishenghuo.Map.MapActivity;
 import com.yishenghuo.yishenghuo.R;
 import com.yishenghuo.yishenghuo.ui.TitleBar;
 
 public class SettingActivity extends AppCompatActivity {
+
+    private TextView mtv_xiaoqu;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate ( savedInstanceState );
         setContentView ( R.layout.activity_setting );
         iniView ();
+
+        mtv_xiaoqu = (TextView) findViewById(R.id.water_the_next);
+
+        mtv_xiaoqu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SettingActivity.this,MapActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     public void iniView() {

@@ -1,48 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:clipToPadding="false"
-    android:fitsSystemWindows="true"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-<com.yishenghuo.yishenghuo.ui.TitleBar
-        android:id="@+id/map_titlebar"
+    <com.yishenghuo.yishenghuo.ui.TitleBar
+        android:id="@+id/complain_titlebar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/titlebar"
         android:background="@drawable/title_background"
         android:paddingEnd="10dp"
-        android:paddingStart="10dp"/>
-
+        android:paddingStart="10dp" />
 
     <RelativeLayout
+        android:id="@+id/top_layout"
         android:layout_width="match_parent"
-        android:layout_height="280dp"
-        android:orientation="vertical"
-        android:visibility="visible">
-
+        android:layout_height="200dp"
+        >
         <com.baidu.mapapi.map.MapView
-            android:id="@+id/map"
+            android:id="@+id/bmapView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:onClick="true"/>
-
+            android:clickable="true" />
         <ImageView
+            android:id="@+id/marker"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:background="#00000000"
-            android:src="@drawable/ic_gps" />
+            android:src="@drawable/ic_gps"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
     </RelativeLayout>
-
-    <ListView
-        android:id="@+id/lv_near_address"
-        android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:cacheColorHint="#00000000"
-        android:descendantFocusability="beforeDescendants"
-        android:fastScrollEnabled="true"
-        android:scrollbars="none" />
-
-</LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/id_recyclerview"
+        android:layout_below="@+id/top_layout"
+        android:divider="#ffff0000"
+        android:dividerHeight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>

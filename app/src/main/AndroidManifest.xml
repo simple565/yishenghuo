@@ -57,13 +57,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.RegisterActivity"></activity>
-        <activity android:name=".activity.MessageActivity" />
+        <activity android:name=".Neighborhood.MessageActivity" />
         <activity android:name=".activity.WeatherActivity" />
         <activity android:name=".activity.PropertyActivity" />
         <activity android:name=".activity.ParkActivity" />
         <activity android:name=".activity.ElectricActivity" />
         <activity android:name=".activity.NewsActivity" />
-        <activity android:name=".activity.NeighborCircleActivity" />
+        <activity android:name=".Neighborhood.NeighborCircleActivity" />
         <activity android:name=".activity.GasActivity" />
         <activity android:name=".activity.WaterActivity" />
         <activity android:name=".activity.RepairsActivity" />
@@ -72,19 +72,19 @@
         <activity android:name=".activity.ServiceRepairsActivity" />
         <activity android:name=".activity.WashingActivity" />
         <activity android:name=".activity.EntranceActivity" />
-        <activity android:name=".activity.GuesscomeActivity" />
+        <activity android:name=".activity.GuessComeActivity" />
         <activity android:name=".activity.BuildingSettingActivity" />
         <activity android:name=".activity.SettingActivity" />
         <activity android:name=".activity.FeedbackActivity" />
-        <activity android:name=".activity.DynamicActivity" />
-        <activity android:name=".activity.NeighborsActivity" />
+        <activity android:name=".Neighborhood.DynamicActivity" />
+        <activity android:name=".Neighborhood.NeighborsActivity" />
         <activity android:name=".activity.CommunityActivity" />
         <activity android:name=".activity.ElectricApplyActivity" />
         <activity android:name=".activity.PropertyApplyActivity" />
         <activity android:name=".activity.GasApplyActivity" />
         <activity android:name=".activity.ParkApplyActivity" />
-        <activity android:name=".activity.Water_applyActivity" />
-        <activity android:name=".activity.MapActivity"></activity>
+        <activity android:name=".activity.WaterApplyActivity" />
+        <activity android:name=".Map.MapActivity"></activity>
     </application>
 
 </manifest>
