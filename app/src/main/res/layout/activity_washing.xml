@@ -7,24 +7,24 @@
     <com.yishenghuo.yishenghuo.ui.TitleBar
         android:id="@+id/washing_titlebar"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/titlebar"
+        android:layout_height="@dimen/TitleBar"
         android:background="@drawable/title_background"
         android:paddingEnd="10dp"
-        android:paddingStart="10dp"/>
+        android:paddingStart="10dp" />
 
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="120sp"
         android:layout_marginTop="10dp"
-        android:padding="10dp"
-        android:background="@color/white">
+        android:background="@color/white"
+        android:padding="10dp">
 
         <ImageView
+            android:id="@+id/washing_img1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/property"
-            android:id="@+id/washing_img1" />
+            android:src="@drawable/property" />
 
         <TextView
             android:id="@+id/washing_name1"
@@ -57,14 +57,14 @@
         android:layout_width="match_parent"
         android:layout_height="120sp"
         android:layout_marginTop="10dp"
-        android:padding="10dp"
-        android:background="@color/white">
+        android:background="@color/white"
+        android:padding="10dp">
 
         <ImageView
+            android:id="@+id/washing_img2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/property"
-            android:id="@+id/washing_img2" />
+            android:src="@drawable/property" />
 
         <TextView
             android:id="@+id/washing_name2"

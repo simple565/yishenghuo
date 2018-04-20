@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
     android:layout_width="match_parent"
@@ -12,56 +12,14 @@
         android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
-    </FrameLayout>
+        android:layout_weight="1" />
 
-    <RelativeLayout
+    <com.ashokvarma.bottomnavigation.BottomNavigationBar
+        android:id="@+id/main_navigation_bar"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/navigationbar"
-        android:gravity="center_vertical"
-        android:paddingEnd="10dp"
-        android:paddingStart="10dp">
-
-        <ImageButton
-            android:id="@+id/navigationbar_home"
-            android:layout_width="@dimen/navigation_icon"
-            android:layout_height="@dimen/navigation_icon"
-            android:background="@drawable/icon_home_select"
-            />
-
-        <ImageButton
-            android:id="@+id/navigationbar_neighbor"
-            android:layout_width="@dimen/navigation_icon"
-            android:layout_height="@dimen/navigation_icon"
-            android:layout_marginStart="@dimen/navigation_horizontal_margin"
-            android:layout_toEndOf="@id/navigationbar_home"
-            android:background="@drawable/icon_neighbor_left"
-            />
-
-        <ImageButton
-            android:id="@+id/navigationbar_service"
-            android:layout_width="@dimen/navigation_icon"
-            android:layout_height="@dimen/navigation_icon"
-            android:layout_centerHorizontal="true"
-            android:background="@drawable/icon_service_left"
-            />
-
-        <ImageButton
-            android:id="@+id/navigationbar_mall"
-            android:layout_width="@dimen/navigation_icon"
-            android:layout_height="@dimen/navigation_icon"
-            android:layout_marginStart="@dimen/navigation_horizontal_margin"
-            android:layout_toEndOf="@id/navigationbar_service"
-            android:background="@drawable/icon_mall_left"
-            />
-
-        <ImageButton
-            android:id="@+id/navigationbar_account"
-            android:layout_width="@dimen/navigation_icon"
-            android:layout_height="@dimen/navigation_icon"
-            android:layout_alignParentEnd="true"
-            android:background="@drawable/icon_account_left"
-            />
-    </RelativeLayout>
+        android:layout_height="wrap_content"
+        app:bnbBackgroundColor="@color/white"
+        app:bnbBackgroundStyle="background_style_static"
+        app:bnbMode="mode_fixed" />
 
 </LinearLayout>

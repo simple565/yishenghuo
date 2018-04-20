@@ -9,7 +9,7 @@
         android:id="@+id/message_titlebar"
         style="@style/TitleBar"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/titlebar">
+        android:layout_height="@dimen/TitleBar">
 
         <ImageButton
             android:id="@+id/message_btn_back"

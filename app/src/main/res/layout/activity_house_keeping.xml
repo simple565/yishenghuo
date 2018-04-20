@@ -6,33 +6,33 @@
 
     <com.yishenghuo.yishenghuo.ui.TitleBar
         android:id="@+id/house_keeping_titlebar"
+        style="@style/TitleBar"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/titlebar"
-        style="@style/TitleBar"/>
+        android:layout_height="@dimen/TitleBar" />
 
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="120sp"
         android:layout_marginTop="10dp"
-        android:padding="10dp"
-        android:background="@color/white">
+        android:background="@color/white"
+        android:padding="10dp">
 
         <ImageView
+            android:id="@+id/housekeeping_img1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/property"
-            android:id="@+id/housekeeping_img1" />
+            android:src="@drawable/property" />
 
         <TextView
             android:id="@+id/housekeeping_name1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:textSize="14sp"
             android:layout_marginStart="10sp"
             android:layout_toEndOf="@+id/housekeeping_img1"
-            android:text="@string/housekeeping_name1" />
+            android:text="@string/housekeeping_name1"
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/housekeeping_company1"
@@ -56,24 +56,24 @@
         android:layout_width="match_parent"
         android:layout_height="120sp"
         android:layout_marginTop="10dp"
-        android:padding="10dp"
-        android:background="@color/white">
+        android:background="@color/white"
+        android:padding="10dp">
 
         <ImageView
+            android:id="@+id/housekeeping_img2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/property"
-            android:id="@+id/housekeeping_img2" />
+            android:src="@drawable/property" />
 
         <TextView
             android:id="@+id/housekeeping_name2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:textSize="14sp"
             android:layout_marginStart="10sp"
             android:layout_toEndOf="@+id/housekeeping_img2"
-            android:text="@string/housekeeping_name2" />
+            android:text="@string/housekeeping_name2"
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/housekeeping_company2"

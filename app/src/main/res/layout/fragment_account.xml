@@ -9,7 +9,7 @@
         android:id="@+id/account_titlebar"
         style="@style/TitleBar"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/titlebar" />
+        android:layout_height="@dimen/TitleBar" />
 
     <LinearLayout
         android:layout_width="match_parent"

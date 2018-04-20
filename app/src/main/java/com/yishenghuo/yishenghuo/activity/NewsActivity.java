@@ -82,7 +82,7 @@ public class NewsActivity extends AppCompatActivity {
 
                     @Override
                     public void onNext(NewsBean newsBean) {
-
+                        setNews ( newsBean );
                     }
 
                     @Override

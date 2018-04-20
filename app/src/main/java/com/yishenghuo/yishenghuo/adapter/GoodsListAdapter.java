@@ -21,9 +21,10 @@ public class GoodsListAdapter extends BaseAdapter {
             R.drawable.goods_01, R.drawable.goods_02,
             R.drawable.goods_01, R.drawable.goods_02,
             R.drawable.goods_03, R.drawable.goods_04};
-    private String[] goods_name = {"缴费", "缴费", "缴费", "缴费", "缴费", "缴费", "缴费", "缴费"};
-    private String[] goods_price = {"惊爆价：", "促销价：", "惊爆价：", "促销价：", "惊爆价：",
-            "促销价：", "惊爆价：", "促销价："};
+    private String[] goods_name = {"短袖", "厨具",  "飘柔洗发水", "水果",
+            "飘柔洗发水", "水果", "短袖", "厨具"};
+    private String[] goods_price = {"￥39.9", "￥199.9", "￥9.9", "￥29.9",
+            "￥29.9", "￥9.9", "￥39.9", "￥199.9"};
 
     public GoodsListAdapter(Context context) {
         layoutInflater = LayoutInflater.from(context);

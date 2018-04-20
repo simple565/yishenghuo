@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:background="@color/page_background"
-              android:orientation="vertical">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_background"
+    android:orientation="vertical">
 
     <com.yishenghuo.yishenghuo.ui.TitleBar
         android:id="@+id/service_titlebar"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/titlebar"
+        android:layout_height="@dimen/TitleBar"
         android:background="@drawable/title_background"
         android:paddingEnd="10dp"
-        android:paddingStart="10dp"/>
+        android:paddingStart="10dp" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -24,7 +24,7 @@
             android:id="@+id/service_iv_living"
             android:layout_width="@dimen/service_list_icon"
             android:layout_height="wrap_content"
-            android:background="@drawable/living"/>
+            android:background="@drawable/living" />
 
         <TextView
             android:id="@+id/service_tv_living"
@@ -32,7 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toEndOf="@id/service_iv_living"
-            android:text="@string/service_living"/>
+            android:text="@string/service_living" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -47,28 +47,28 @@
                 style="@style/service_list_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/service_housekeeping"/>
+                android:text="@string/service_housekeeping" />
 
             <TextView
                 android:id="@+id/service_tv_entrance"
                 style="@style/service_list_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/service_entrance"/>
+                android:text="@string/service_entrance" />
 
             <TextView
                 android:id="@+id/service_tv_repairs"
                 style="@style/service_list_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/service_repairs"/>
+                android:text="@string/service_repairs" />
 
             <TextView
                 android:id="@+id/service_tv_wash"
                 style="@style/service_list_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/service_wash"/>
+                android:text="@string/service_wash" />
         </LinearLayout>
 
     </RelativeLayout>
@@ -85,7 +85,7 @@
             android:id="@+id/service_iv_property"
             android:layout_width="@dimen/service_list_icon"
             android:layout_height="wrap_content"
-            android:background="@drawable/property"/>
+            android:background="@drawable/property" />
 
         <TextView
             android:id="@+id/service_tv_property"
@@ -93,7 +93,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toEndOf="@id/service_iv_property"
-            android:text="@string/service_property"/>
+            android:text="@string/service_property" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -108,28 +108,28 @@
                 style="@style/service_list_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/service_property_announce"/>
+                android:text="@string/service_property_announce" />
 
             <TextView
                 android:id="@+id/service_tv_announce"
                 style="@style/service_list_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/service_announce"/>
+                android:text="@string/service_announce" />
 
             <TextView
                 android:id="@+id/service_tv_complain"
                 style="@style/service_list_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/service_complaints"/>
+                android:text="@string/service_complaints" />
 
             <TextView
                 android:id="@+id/service_tv_repair"
                 style="@style/service_list_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/service_repair"/>
+                android:text="@string/service_repair" />
         </LinearLayout>
 
     </RelativeLayout>
@@ -146,7 +146,7 @@
             android:id="@+id/service_iv_recharge"
             android:layout_width="@dimen/service_list_icon"
             android:layout_height="wrap_content"
-            android:background="@drawable/recharge"/>
+            android:background="@drawable/recharge" />
 
         <TextView
             android:id="@+id/service_tv_recharge"
@@ -154,7 +154,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toEndOf="@id/service_iv_recharge"
-            android:text="@string/service_recharge"/>
+            android:text="@string/service_recharge" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -168,24 +168,21 @@
                 style="@style/service_list_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/service_property_fee"
-                />
+                android:text="@string/service_property_fee" />
 
             <TextView
                 android:id="@+id/service_tv_gasfee"
                 style="@style/service_list_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/service_gas_fee"
-                />
+                android:text="@string/service_gas_fee" />
 
             <TextView
                 android:id="@+id/service_tv_water"
                 style="@style/service_list_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="水费"
-                />
+                android:text="水费" />
 
             <TextView
                 android:id="@+id/service_tv_electric"
@@ -201,8 +198,7 @@
                 style="@style/service_list_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/service_parking_fee"
-                />
+                android:text="@string/service_parking_fee" />
         </LinearLayout>
 
     </RelativeLayout>
@@ -219,7 +215,7 @@
             android:id="@+id/service_iv_query"
             android:layout_width="@dimen/service_list_icon"
             android:layout_height="wrap_content"
-            android:background="@drawable/query"/>
+            android:background="@drawable/query" />
 
         <TextView
             android:id="@+id/service_tv_query"
@@ -227,7 +223,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toEndOf="@id/service_iv_query"
-            android:text="@string/service_query"/>
+            android:text="@string/service_query" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -241,22 +237,21 @@
                 style="@style/service_list_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/service_weather"
-                />
+                android:text="@string/service_weather" />
 
             <TextView
                 android:id="@+id/service_tv_trafficquery"
                 style="@style/service_list_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/service_traffic"/>
+                android:text="@string/service_traffic" />
 
             <TextView
                 android:id="@+id/service_tv_communities"
                 style="@style/service_list_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/service_communities"/>
+                android:text="@string/service_communities" />
 
         </LinearLayout>
 
@@ -274,7 +269,7 @@
             android:id="@+id/service_iv_financial"
             android:layout_width="@dimen/service_list_icon"
             android:layout_height="wrap_content"
-            android:background="@drawable/finance"/>
+            android:background="@drawable/finance" />
 
         <TextView
             android:id="@+id/service_tv_financial"
@@ -282,7 +277,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toEndOf="@id/service_iv_financial"
-            android:text="@string/service_financial"/>
+            android:text="@string/service_financial" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -296,21 +291,21 @@
                 style="@style/service_list_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/service_house_rent"/>
+                android:text="@string/service_house_rent" />
 
             <TextView
                 android:id="@+id/service_tv_housesell"
                 style="@style/service_list_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/service_house_sell"/>
+                android:text="@string/service_house_sell" />
 
             <TextView
                 android:id="@+id/service_iv_finance"
                 style="@style/service_list_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/service_finance"/>
+                android:text="@string/service_finance" />
 
         </LinearLayout>
 
