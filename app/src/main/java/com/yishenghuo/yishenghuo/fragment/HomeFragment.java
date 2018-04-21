@@ -59,7 +59,7 @@ public class HomeFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home, null);
         iniView(view);
 
-        ts.setFactory(new ViewSwitcher.ViewFactory() {
+       /* ts.setFactory(new ViewSwitcher.ViewFactory() {
             @Override
             public View makeView() {
                 TextView tv = new TextView(getContext());
@@ -76,7 +76,7 @@ public class HomeFragment extends Fragment {
                 });
                 return tv;
             }
-        });
+        });*/
 
         editText.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -125,10 +125,10 @@ public class HomeFragment extends Fragment {
         ImageView iv_payment = (ImageView) view.findViewById(R.id.home_btn_payment);
         ImageView iv_repair = (ImageView) view.findViewById(R.id.home_btn_repair);
 
-        gridView = (GridView) view.findViewById(R.id.home_gv_goods);
+        /*gridView = (GridView) view.findViewById(R.id.home_gv_goods);
         gridView.setAdapter(new GoodsListAdapter(view.getContext()));
 
-        ts = (TextSwitcher) view.findViewById(R.id.ts);
+        ts = (TextSwitcher) view.findViewById(R.id.ts);*/
         editText = (EditText) view.findViewById(R.id.home_edt_search);
         editText.getBackground().setAlpha(100);//设置背景色的透明度
 

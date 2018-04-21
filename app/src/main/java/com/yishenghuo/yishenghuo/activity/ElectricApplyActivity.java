@@ -11,31 +11,26 @@ import com.yishenghuo.yishenghuo.ui.TitleBar;
 
 public class ElectricApplyActivity extends AppCompatActivity {
 
-    private TitleBar mTitleBar;
-    private Button electric_next;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_electric_apply);
+        super.onCreate ( savedInstanceState );
+        setContentView ( R.layout.activity_electric_apply );
+        iniView ();
 
-        iniView();
 
-        electric_next = (Button)findViewById(R.id.water_the_next);
-
-        electric_next.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ElectricApplyActivity.this,ElectricActivity.class);
-                startActivity(intent);
-            }
-        });
     }
 
     public void iniView() {
-        mTitleBar = (TitleBar) findViewById(R.id.electric_apply_titlebar);
-        mTitleBar.setText("新增缴费用户");
-        mTitleBar.setLeftButton(R.drawable.ic_arrow_left);
-
+        TitleBar mTitleBar = (TitleBar) findViewById ( R.id.electric_apply_titlebar );
+        mTitleBar.setText ( "新增缴费用户" );
+        mTitleBar.setLeftButton ( R.drawable.ic_arrow_left );
+        Button electric_next = (Button) findViewById ( R.id.electric_apple_next );
+        electric_next.setOnClickListener ( new View.OnClickListener () {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent ( ElectricApplyActivity.this, ElectricActivity.class );
+                startActivity ( intent );
+            }
+        } );
     }
 }

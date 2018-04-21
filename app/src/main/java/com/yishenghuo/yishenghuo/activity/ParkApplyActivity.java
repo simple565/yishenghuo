@@ -11,31 +11,34 @@ import com.yishenghuo.yishenghuo.ui.TitleBar;
 
 public class ParkApplyActivity extends AppCompatActivity {
 
-    private TitleBar mTitleBar;
-    private Button park_next;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_park_apply);
+        super.onCreate ( savedInstanceState );
+        setContentView ( R.layout.activity_park_apply );
 
-        iniView();
+        iniView ();
 
-        park_next = (Button)findViewById(R.id.park_the_next);
 
-        park_next.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ParkApplyActivity.this,ParkActivity.class);
-                startActivity(intent);
-            }
-        });
     }
 
     public void iniView() {
-        mTitleBar = (TitleBar) findViewById(R.id.park_apply_titlebar);
-        mTitleBar.setText("新增缴费用户");
-        mTitleBar.setLeftButton(R.drawable.ic_arrow_left);
-
+        TitleBar mTitleBar = (TitleBar) findViewById ( R.id.park_apply_titlebar );
+        mTitleBar.setText ( "新增缴费用户" );
+        mTitleBar.setLeftButton ( R.drawable.ic_arrow_left );
+        mTitleBar.setLeftButtonClickListener ( new View.OnClickListener () {
+            @Override
+            public void onClick(View v) {
+                finish ();
+            }
+        } );
+        Button park_next = (Button) findViewById ( R.id.park_the_next );
+        park_next.setOnClickListener ( new View.OnClickListener () {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent ( ParkApplyActivity.this, ParkActivity.class );
+                startActivity ( intent );
+            }
+        } );
     }
 }

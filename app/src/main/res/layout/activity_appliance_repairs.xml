@@ -5,39 +5,39 @@
     android:orientation="vertical">
 
     <com.yishenghuo.yishenghuo.ui.TitleBar
-        android:id="@+id/service_repairs_titlebar"
+        android:id="@+id/appliance_repairs_titlebar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/TitleBar"
         android:background="@drawable/title_background"
         android:paddingEnd="10dp"
-        android:paddingStart="10dp"/>
+        android:paddingStart="10dp" />
 
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="120sp"
         android:layout_marginTop="10dp"
-        android:padding="10dp"
-        android:background="@color/white">
+        android:background="@color/white"
+        android:padding="10dp">
 
         <ImageView
+            android:id="@+id/appliance_repair_img1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/property"
-            android:id="@+id/service_repair_img1" />
+            android:src="@drawable/property" />
 
         <TextView
-            android:id="@+id/service_repair_name1"
+            android:id="@+id/appliance_repair_name1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:textSize="15sp"
             android:layout_marginStart="10sp"
-            android:layout_toEndOf="@+id/service_repair_img1"
-            android:text="@string/service_repair_name1" />
+            android:layout_toEndOf="@+id/appliance_repair_img1"
+            android:text="@string/service_repair_name1"
+            android:textSize="15sp" />
 
         <TextView
-            android:id="@+id/service_repair_company1"
+            android:id="@+id/appliance_repair_company1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -45,7 +45,7 @@
             android:text="@string/service_repair_company" />
 
         <TextView
-            android:id="@+id/service_repair_price1"
+            android:id="@+id/appliance_repair_price1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
@@ -58,27 +58,27 @@
         android:layout_width="match_parent"
         android:layout_height="120sp"
         android:layout_marginTop="10dp"
-        android:padding="10dp"
-        android:background="@color/white">
+        android:background="@color/white"
+        android:padding="10dp">
 
         <ImageView
+            android:id="@+id/appliance_repair_img2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/property"
-            android:id="@+id/service_repair_img2" />
+            android:src="@drawable/property" />
 
         <TextView
-            android:id="@+id/service_repair_name2"
+            android:id="@+id/appliance_repair_name2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:textSize="15sp"
             android:layout_marginStart="10sp"
-            android:layout_toEndOf="@+id/service_repair_img2"
-            android:text="@string/service_repair_name2" />
+            android:layout_toEndOf="@+id/appliance_repair_img2"
+            android:text="@string/service_repair_name2"
+            android:textSize="15sp" />
 
         <TextView
-            android:id="@+id/service_repair_company2"
+            android:id="@+id/appliance_repair_company2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -86,7 +86,7 @@
             android:text="@string/service_repair_company" />
 
         <TextView
-            android:id="@+id/service_repair_price2"
+            android:id="@+id/appliance_repair_price2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"

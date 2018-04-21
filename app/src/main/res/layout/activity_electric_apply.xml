@@ -87,12 +87,12 @@
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
         android:text="@string/protocol"
         />
 
     <Button
-        android:id="@+id/electric_the_next"
+        android:id="@+id/electric_apple_next"
         android:layout_width="245dp"
         android:layout_height="48dp"
         android:layout_gravity="center_horizontal"

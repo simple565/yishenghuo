@@ -52,11 +52,10 @@
             android:windowSoftInputMode="stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.RegisterActivity"></activity>
+        <activity android:name=".activity.RegisterActivity"/>
         <activity android:name=".Neighborhood.MessageActivity" />
         <activity android:name=".activity.WeatherActivity" />
         <activity android:name=".activity.PropertyActivity" />
@@ -69,7 +68,7 @@
         <activity android:name=".activity.RepairsActivity" />
         <activity android:name=".activity.ComplainActivity" />
         <activity android:name=".activity.HouseKeepingActivity" />
-        <activity android:name=".activity.ServiceRepairsActivity" />
+        <activity android:name=".activity.ApplianceRepairActivity" />
         <activity android:name=".activity.WashingActivity" />
         <activity android:name=".activity.EntranceActivity" />
         <activity android:name=".activity.GuessComeActivity" />
@@ -84,7 +83,7 @@
         <activity android:name=".activity.GasApplyActivity" />
         <activity android:name=".activity.ParkApplyActivity" />
         <activity android:name=".activity.WaterApplyActivity" />
-        <activity android:name=".Map.MapActivity"></activity>
+        <activity android:name=".Map.MapActivity"/>
     </application>
 
 </manifest>

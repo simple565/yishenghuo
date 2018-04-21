@@ -78,7 +78,7 @@
     <!--设置 每栏样式-->
     <style name="setting_layout">
         <item name="android:padding">10dp</item>
-        <item name="android:layout_marginTop">@dimen/activity_vertical_margin</item>
+        <item name="android:layout_marginTop">10dp</item>
         <item name="android:background">@color/white</item>
         <item name="android:gravity">center_vertical</item>
     </style>

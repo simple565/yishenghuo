@@ -25,15 +25,16 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
 
     private HomeFragment fragment_home;
     private ServiceFragment fragment_service;
-    private MallFragment fragment_mall;
+    //private MallFragment fragment_mall;
     private AccountFragment fragment_account;
     private NeighborFragment fragment_neighbor;
-
+    private BottomNavigationItem home = new BottomNavigationItem ( R.drawable.icon_home_select, "首页" );
+    private BottomNavigationItem neighbor = new BottomNavigationItem ( R.drawable.icon_neighbor_select, "邻里" );
+    private BottomNavigationItem service = new BottomNavigationItem ( R.drawable.icon_service_select, "服务" );
+    private BottomNavigationItem account = new BottomNavigationItem ( R.drawable.icon_account_select, "我的" );
 
     FragmentManager fragmentmanager = getSupportFragmentManager ();
     FragmentTransaction transaction = fragmentmanager.beginTransaction ();
-    //定义底部导航栏
-    private ImageButton btn_home, btn_neighbor, btn_service, btn_mall, btn_account;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,61 +75,16 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
      * 初始化控件，设置相关监听器
      */
     public void iniView() {
+
         BottomNavigationBar bottomNavigationBar = findViewById ( R.id.main_navigation_bar );
-        bottomNavigationBar.addItem ( new BottomNavigationItem ( R.drawable.icon_home_select, "首页" ) )
-                .addItem ( new BottomNavigationItem ( R.drawable.icon_neighbor_left, "邻里" ) )
-                .addItem ( new BottomNavigationItem ( R.drawable.icon_service_left, "服务" ) )
-                .addItem ( new BottomNavigationItem ( R.drawable.icon_account_left, "我的" ) )
+        bottomNavigationBar.addItem ( home )
+                .addItem ( neighbor )
+                .addItem ( service )
+                .addItem ( account )
                 .initialise ();
         bottomNavigationBar.setTabSelectedListener ( this );
     }
 
-
-
-   /* public void onClick(View view) {
-        switch (view.getId ()) {
-            case R.id.navigationbar_home:
-                btn_home.setBackgroundResource ( R.drawable.icon_home_select );
-                btn_neighbor.setBackgroundResource ( R.drawable.icon_neighbor_left );
-                btn_service.setBackgroundResource ( R.drawable.icon_service_left );
-                //btn_mall.setBackgroundResource(R.drawable.icon_mall_left);
-                btn_account.setBackgroundResource ( R.drawable.icon_account_left );
-                setLayoutItem ( 0 );
-                break;
-            case R.id.navigationbar_neighbor:
-                btn_home.setBackgroundResource ( R.drawable.icon_home_right );
-                btn_neighbor.setBackgroundResource ( R.drawable.icon_neighbor_select );
-                btn_service.setBackgroundResource ( R.drawable.icon_service_left );
-                // btn_mall.setBackgroundResource(R.drawable.icon_mall_left);
-                btn_account.setBackgroundResource ( R.drawable.icon_account_left );
-                setLayoutItem ( 1 );
-                break;
-            case R.id.navigationbar_service:
-                btn_home.setBackgroundResource ( R.drawable.icon_home_right );
-                btn_neighbor.setBackgroundResource ( R.drawable.icon_neighbor_right );
-                btn_service.setBackgroundResource ( R.drawable.icon_service_select );
-                // btn_mall.setBackgroundResource(R.drawable.icon_mall_left);
-                btn_account.setBackgroundResource ( R.drawable.icon_account_left );
-                setLayoutItem ( 2 );
-                break;
-          *//*  case R.id.navigationbar_mall:
-                btn_home.setBackgroundResource(R.drawable.icon_home_right);
-                btn_neighbor.setBackgroundResource(R.drawable.icon_neighbor_right);
-                btn_service.setBackgroundResource(R.drawable.icon_service_right);
-                //btn_mall.setBackgroundResource(R.drawable.icon_mall_select);
-                btn_account.setBackgroundResource(R.drawable.icon_account_left);
-                setLayoutItem(3);
-                break;*//*
-            case R.id.navigationbar_account:
-                btn_home.setBackgroundResource ( R.drawable.icon_home_right );
-                btn_neighbor.setBackgroundResource ( R.drawable.icon_neighbor_right );
-                btn_service.setBackgroundResource ( R.drawable.icon_service_right );
-                //btn_mall.setBackgroundResource(R.drawable.icon_mall_right);
-                btn_account.setBackgroundResource ( R.drawable.icon_account_select );
-                setLayoutItem ( 4 );
-                break;
-        }
-    }*/
 
     public void hideFragment(FragmentTransaction transaction) {
         if (fragment_home != null) {
@@ -152,6 +108,9 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
         hideFragment ( transaction );
         switch (position) {
             case 0:
+                neighbor.setInactiveIconResource ( R.drawable.icon_neighbor_left );
+                service.setInactiveIconResource ( R.drawable.icon_service_left );
+                account.setInactiveIconResource ( R.drawable.icon_account_left );
                 if (fragment_home == null) {
                     fragment_home = new HomeFragment ();
                     transaction.add ( R.id.content, fragment_home );
@@ -160,6 +119,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
                 }
                 break;
             case 1:
+                home.setInactiveIconResource ( R.drawable.icon_home_right );
+
                 if (fragment_neighbor == null) {
                     fragment_neighbor = new NeighborFragment ();
                     transaction.add ( R.id.content, fragment_neighbor );

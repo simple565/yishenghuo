@@ -2,158 +2,175 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/page_background"
+    android:fitsSystemWindows="true"
     android:orientation="vertical">
 
     <com.yishenghuo.yishenghuo.ui.TitleBar
         android:id="@+id/setting_titlebar"
         style="@style/TitleBar"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/TitleBar"/>
+        android:layout_height="@dimen/TitleBar" />
 
-
-    <ImageView
-        android:id="@+id/setting_iv_favicon"
-        android:layout_width="@dimen/favicon"
-        android:layout_height="@dimen/favicon"
-        android:layout_gravity="center_horizontal"
-        android:background="@drawable/my_favicon" />
-
-    <RelativeLayout
-        style="@style/setting_layout"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="@dimen/setting_layout_height">
+        android:layout_height="match_parent">
 
-        <TextView
-            style="@style/setting_text"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:text="@string/nickname" />
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/setting_tv_nickname"
-            style="@style/setting_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:text="皮卡皮卡丘" />
-    </RelativeLayout>
+            <ImageView
+                android:id="@+id/setting_iv_favicon"
+                android:layout_width="@dimen/favicon"
+                android:layout_height="@dimen/favicon"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/my_favicon" />
 
-    <RelativeLayout
-        style="@style/setting_layout"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/setting_layout_height">
+            <RelativeLayout
+                android:id="@+id/setting_layout_nickname"
+                style="@style/setting_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_layout_height">
 
-        <TextView
-            android:id="@+id/my_xiaoqu"
-            style="@style/setting_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/my_property" />
+                <TextView
+                    style="@style/setting_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/nickname" />
 
-        <TextView
-            style="@style/setting_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:text="@string/my_property2" />
+                <TextView
+                    android:id="@+id/setting_tv_nickname"
+                    style="@style/setting_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="皮卡皮卡丘" />
+            </RelativeLayout>
 
+            <RelativeLayout
+                android:id="@+id/setting_layout_community"
+                style="@style/setting_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_layout_height">
 
-    </RelativeLayout>
+                <TextView
 
-    <RelativeLayout
-        style="@style/setting_layout"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/setting_layout_height">
+                    style="@style/setting_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_property" />
 
-        <TextView
-            style="@style/setting_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/my_QRcode" />
-
-        <ImageView
-            android:layout_width="23sp"
-            android:layout_height="23sp"
-            android:layout_alignParentEnd="true"
-            android:background="@drawable/ic_code" />
-
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        style="@style/setting_layout"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/setting_layout_height">
-
-        <TextView
-            style="@style/setting_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/the_third" />
-
-        <ImageView
-            android:id="@+id/setting_iv_qq"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:background="@drawable/ic_qq" />
-
-        <ImageView
-            android:id="@+id/setting_iv_wechat"
-            android:layout_width="23sp"
-            android:layout_height="23sp"
-            android:layout_toStartOf="@id/setting_iv_qq"
-            android:background="@drawable/ic_wechat" />
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        style="@style/setting_layout"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/setting_layout_height">
-
-        <TextView
-            style="@style/setting_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/change_password" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:background="@drawable/ic_arrow_right" />
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        style="@style/setting_layout"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/setting_layout_height">
-
-        <TextView
-            style="@style/setting_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/bind_phone" />
+                <TextView
+                    style="@style/setting_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/my_property2" />
 
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:background="@drawable/ic_arrow_right" />
+            </RelativeLayout>
 
-    </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/setting_layout_QRcode"
+                style="@style/setting_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_layout_height">
 
-    <Button
-        android:id="@+id/setting_btn_quit"
-        android:layout_width="@dimen/account_button_quit"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20sp"
-        android:background="@drawable/account_quit_backgound"
-        android:text="@string/quit_account"
-        android:textColor="@color/white" />
+                <TextView
+                    style="@style/setting_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_QRcode" />
+
+                <ImageView
+                    android:layout_width="23sp"
+                    android:layout_height="23sp"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/ic_code" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/setting_layout_bind"
+                style="@style/setting_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_layout_height">
+
+                <TextView
+                    style="@style/setting_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/the_third" />
+
+                <ImageView
+                    android:id="@+id/setting_iv_qq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/ic_qq" />
+
+                <ImageView
+                    android:id="@+id/setting_iv_wechat"
+                    android:layout_width="23sp"
+                    android:layout_height="23sp"
+                    android:layout_toStartOf="@id/setting_iv_qq"
+                    android:background="@drawable/ic_wechat" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/setting_layout_changePassword"
+                style="@style/setting_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_layout_height">
+
+                <TextView
+                    style="@style/setting_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/change_password" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/ic_arrow_right" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/setting_layout_changePhone"
+                style="@style/setting_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_layout_height">
+
+                <TextView
+                    style="@style/setting_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bind_phone" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/ic_arrow_right" />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/setting_btn_quit"
+                android:layout_width="@dimen/account_button_quit"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20sp"
+                android:background="@drawable/account_quit_backgound"
+                android:text="@string/quit_account"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
