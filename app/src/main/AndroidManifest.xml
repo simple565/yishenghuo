@@ -87,6 +87,7 @@
         <activity android:name=".activity.WaterApplyActivity" />
         <activity android:name=".Map.MapActivity" />
         <activity android:name=".activity.AsideActivity" />
+        <activity android:name=".activity.NoticeActivity"></activity>
         <activity android:name=".Neighborhood.HealthActivity"></activity>
     </application>
 
