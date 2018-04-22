@@ -20,6 +20,7 @@ import com.yishenghuo.yishenghuo.Neighborhood.MessageActivity;
 import com.yishenghuo.yishenghuo.activity.NoticeActivity;
 import com.yishenghuo.yishenghuo.activity.ParkApplyActivity;
 import com.yishenghuo.yishenghuo.activity.PropertyApplyActivity;
+import com.yishenghuo.yishenghuo.activity.Property_phoneActivity;
 import com.yishenghuo.yishenghuo.activity.RepairsActivity;
 import com.yishenghuo.yishenghuo.activity.WashingActivity;
 import com.yishenghuo.yishenghuo.activity.WaterApplyActivity;
@@ -105,7 +106,7 @@ public class ServiceFragment extends Fragment implements View.OnClickListener {
                 startActivity(new Intent(getActivity(), NoticeActivity.class));
                 break;
             case R.id.service_tv_announce:
-                //startActivity(new Intent(getActivity(), ));
+                startActivity(new Intent(getActivity(), Property_phoneActivity.class));
                 break;
             case R.id.service_tv_complain:
                 startActivity ( new Intent ( getActivity (), ComplainActivity.class ) );

@@ -24,6 +24,8 @@ import com.yishenghuo.yishenghuo.activity.EntranceActivity;
 import com.yishenghuo.yishenghuo.activity.LoginActivity;
 import com.yishenghuo.yishenghuo.Neighborhood.MessageActivity;
 import com.yishenghuo.yishenghuo.activity.NoticeActivity;
+import com.yishenghuo.yishenghuo.activity.PropertyApplyActivity;
+import com.yishenghuo.yishenghuo.activity.RepairsActivity;
 import com.yishenghuo.yishenghuo.adapter.GoodsListAdapter;
 
 import java.util.ArrayList;
@@ -130,7 +132,19 @@ public class HomeFragment extends Fragment {
             }
         });
         ImageView iv_payment = (ImageView) view.findViewById(R.id.home_btn_payment);
+        iv_payment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), PropertyApplyActivity.class));
+            }
+        });
         ImageView iv_repair = (ImageView) view.findViewById(R.id.home_btn_repair);
+        iv_repair.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), RepairsActivity.class));
+            }
+        });
 
         /*gridView = (GridView) view.findViewById(R.id.home_gv_goods);
         gridView.setAdapter(new GoodsListAdapter(view.getContext()));

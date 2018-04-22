@@ -193,4 +193,14 @@
     <string name="start_chat">发起聊天</string>
     <string name="chose_friend">选择好友</string>
     <string name="scan">扫一扫</string>
+
+    <!--物业电话-->
+    <string name="property_name">物业公司名称：</string>
+    <string name="property_address">物业公司地址</string>
+    <string name="property_address2">福建省厦门市集美区市政服务中心三楼</string>
+    <string name="property_time">物业上班时间：</string>
+    <string name="property_time2">8:30am - 11:30am</string>
+    <string name="property_time3">14:30pm - 17:30pm</string>
+    <string name="property_phone">物业公司电话：</string>
+    <string name="property_phone2">0591-xxxxxxx</string>
 </resources>
