@@ -1,5 +1,6 @@
 package com.yishenghuo.yishenghuo;
 
+import com.yishenghuo.yishenghuo.Model.bean.HealthEntity;
 import com.yishenghuo.yishenghuo.Model.bean.NewsBean;
 import com.yishenghuo.yishenghuo.Model.bean.UserBean;
 import com.yishenghuo.yishenghuo.Model.bean.WeatherBean;
@@ -20,12 +21,16 @@ public interface ApiService {
     String BASE_URL = "http://123.207.18.66:8000/api/";
     String NEWS_BASE_URL = "http://api.jisuapi.com/news/";
     String WEATHER_BASE_URL = "https://free-api.heweather.com/v5/";
+    String HEALTHY_BASE_URL = "http://api.tianapi.com/";
 
     @GET("get?")
     Observable <NewsBean> getNewsInfo(@Query("channel") String channel, @Query("appkey") String key);
 
     @GET("weather?")
     Observable <WeatherBean> getWeatherInfo(@Query("city") String city, @Query("key") String key);
+
+    @GET("health/?")
+    Observable <HealthEntity> getHealthyInfo(@Query("key") String key, @Query("num") int num);
 
     @Headers({"Content-Type:application/x-www-form-urlencoded", "Accept:text/plain"})
     @POST("login_page")

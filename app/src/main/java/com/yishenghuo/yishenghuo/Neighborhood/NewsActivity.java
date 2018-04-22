@@ -1,4 +1,4 @@
-package com.yishenghuo.yishenghuo.activity;
+package com.yishenghuo.yishenghuo.Neighborhood;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,8 +11,8 @@ import android.widget.ListView;
 import com.yishenghuo.yishenghuo.ApiService;
 import com.yishenghuo.yishenghuo.DataManager;
 import com.yishenghuo.yishenghuo.Model.bean.NewsBean;
-import com.yishenghuo.yishenghuo.Neighborhood.MessageActivity;
 import com.yishenghuo.yishenghuo.R;
+import com.yishenghuo.yishenghuo.base.BaseView;
 import com.yishenghuo.yishenghuo.ui.TitleBar;
 import com.yishenghuo.yishenghuo.adapter.NewsAdaptor;
 
@@ -21,8 +21,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 
-public class NewsActivity extends AppCompatActivity {
-    private TitleBar mTitleBar;
+public class NewsActivity extends AppCompatActivity implements BaseView<NewsBean>{
     private Context mContext;
     private ListView mListView;
 
@@ -36,7 +35,7 @@ public class NewsActivity extends AppCompatActivity {
 
     private void iniView() {
 
-        mTitleBar = (TitleBar) findViewById(R.id.news_titlebar);
+       TitleBar mTitleBar = (TitleBar) findViewById(R.id.news_titlebar);
         mTitleBar.setText("时事新闻");
         mTitleBar.setRightButtonClickListener(new View.OnClickListener() {
             @Override
@@ -59,46 +58,23 @@ public class NewsActivity extends AppCompatActivity {
         });
 
         mListView = (ListView) findViewById(R.id.news_list);
-
-
     }
 
     /**
      * 新闻数据请求,耗时操作
      */
     private void getNews() {
-        //新闻API密钥
-        final String API_KEY = "44239bc79ecdc150";
-        DataManager.getInstance ().changeUrl ( ApiService.NEWS_BASE_URL );
-        DataManager.getInstance ().getApiService ()
-                .getNewsInfo ( "头条",API_KEY )
-                .subscribeOn ( Schedulers.io () )
-                .observeOn ( AndroidSchedulers.mainThread () )
-                .subscribe ( new Observer <NewsBean> () {
-                    @Override
-                    public void onSubscribe(Disposable d) {
-
-                    }
-
-                    @Override
-                    public void onNext(NewsBean newsBean) {
-                        setNews ( newsBean );
-                    }
-
-                    @Override
-                    public void onError(Throwable e) {
-
-                    }
-
-                    @Override
-                    public void onComplete() {
-
-                    }
-                } );
+       NewsPresenter newsPresenter=new NewsPresenter ( this );
+       newsPresenter.showNews ();
     }
 
-    //显示新闻数据
-    private void setNews(NewsBean newsBean) {
-        mListView.setAdapter(new NewsAdaptor(this, newsBean.getResult().getList()));
+    @Override
+    public void showResult(NewsBean newsBean) {
+        mListView.setAdapter ( new NewsAdaptor ( this,newsBean.getResult ().getList () ) );
+    }
+
+    @Override
+    public void saveData(NewsBean newsBean) {
+
     }
 }

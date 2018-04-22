@@ -1,19 +1,52 @@
 apply plugin: 'com.android.application'
 
+repositories {
+    flatDir {
+        dir 'libs'
+    }
+}
+
 android {
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
     signingConfigs {
         confige {
         }
     }
-    compileSdkVersion 27
-    buildToolsVersion '27.0.3'
+    sourceSets {
+        main {
+            jniLibs.srcDir 'libs'
+        }
+
+        // Move the tests to tests/java, tests/res, etc...
+        androidTest.setRoot('tests')
+
+        // Move the build types to build-types/<type>
+        // For instance, build-types/debug/java, build-types/debug/AndroidManifest.xml, ...
+        // This moves them out of them default location under src/<type>/... which would
+        // conflict with src/ being used by the main source set.
+        // Adding new build types or product flavors should be accompanied
+        // by a similar customization.
+        debug.setRoot('build-types/debug')
+        release.setRoot('build-types/release')
+    }
+
     defaultConfig {
         applicationId "com.yishenghuo.yishenghuo"
         minSdkVersion 19
         targetSdkVersion 22
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    lintOptions {
+        abortOnError false
     }
     buildTypes {
         release {
@@ -25,18 +58,7 @@ android {
     productFlavors {
     }
     //解决native libraries 不支持cpu的体系结构。允许模拟器调试
-    splits {
-        abi {
-            enable true
-            reset()
-            include 'x86', 'armeabi-v7a','x86_64'
-            universalApk true
-        }
-    }
-    1
-}
-repositories {
-    jcenter()
+
 }
 
 
@@ -59,7 +81,6 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-scalars:2.4.0'
     implementation 'com.google.code.gson:gson:2.8.2'
     implementation 'com.squareup.okhttp3:okhttp:3.10.0'
-
     /**/
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support:cardview-v7:27.1.1'
@@ -68,6 +89,7 @@ dependencies {
     implementation 'com.android.support:design:27.1.1'
     implementation 'com.android.support:support-v4:27.1.1'
     androidTestImplementation 'junit:junit:4.12'
-
-    compile files('libs/BaiduLBS_Android.jar')
+    implementation files('libs/BaiduLBS_Android.jar')
+    implementation files('libs/httpmime-4.1.2.jar')
+    implementation files('libs/IndoorscapeAlbumPlugin.jar')
 }

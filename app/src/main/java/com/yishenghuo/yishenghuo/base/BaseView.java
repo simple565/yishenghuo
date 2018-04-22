@@ -1,10 +1,7 @@
 package com.yishenghuo.yishenghuo.base;
 
-public class BaseView <T>{
-    public void showResult(T t) {
-    }
+public interface BaseView<T> {
+    void showResult(T t);
 
-    public void saveData(T t) {
-
-    }
+    void saveData(T t);
 }

@@ -1,6 +1,5 @@
 package com.yishenghuo.yishenghuo.Map;
 
-
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -27,6 +26,7 @@ import com.baidu.mapapi.search.geocode.OnGetGeoCoderResultListener;
 import com.baidu.mapapi.search.geocode.ReverseGeoCodeOption;
 import com.baidu.mapapi.search.geocode.ReverseGeoCodeResult;
 import com.yishenghuo.yishenghuo.R;
+import com.yishenghuo.yishenghuo.base.BaseApplication;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,8 +47,8 @@ public class MapActivity extends AppCompatActivity implements OnGetGeoCoderResul
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //SDKInitializer.initialize( );
         setContentView(R.layout.activity_map);
-        SDKInitializer.initialize(getApplicationContext());
         mRecyclerView= (RecyclerView) findViewById(R.id.id_recyclerview);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mList=new ArrayList<>();
@@ -68,11 +68,16 @@ public class MapActivity extends AppCompatActivity implements OnGetGeoCoderResul
         // 初始化搜索模块，注册事件监听
         mSearch = GeoCoder.newInstance();
         mSearch.setOnGetGeoCodeResultListener(this);
-        /*mBaiduMap.setOnMapStatusChangeListener(new BaiduMap.OnMapStatusChangeListener() {
+        mBaiduMap.setOnMapStatusChangeListener(new BaiduMap.OnMapStatusChangeListener() {
 
             @Override
             public void onMapStatusChangeStart(MapStatus arg0) {
                 // TODO Auto-generated method stub
+
+            }
+
+            @Override
+            public void onMapStatusChangeStart(MapStatus mapStatus, int i) {
 
             }
 
@@ -90,7 +95,7 @@ public class MapActivity extends AppCompatActivity implements OnGetGeoCoderResul
                 // TODO Auto-generated method stub
 
             }
-        });*/
+        });
     }
 
     @Override

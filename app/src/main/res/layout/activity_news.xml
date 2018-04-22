@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.yishenghuo.yishenghuo.activity.NewsActivity">
+    tools:context="com.yishenghuo.yishenghuo.Neighborhood.NewsActivity">
 
     <com.yishenghuo.yishenghuo.ui.TitleBar
         android:id="@+id/news_titlebar"

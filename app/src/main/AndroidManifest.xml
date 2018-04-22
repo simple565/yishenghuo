@@ -37,31 +37,33 @@
         android:name="com.baidu.lbsapi.API_KEY"
         android:value="sMXKELObGt3scowALDrB8Q6uAxW6sqmG" />
 
-
     <application
+        android:name=".base.BaseApplication"
         android:allowBackup="true"
         android:fullBackupContent="true"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.LoginActivity"></activity>
+        <activity android:name=".activity.LoginActivity" />
         <activity
             android:name=".activity.MainActivity"
             android:windowSoftInputMode="stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.RegisterActivity"/>
+        <activity android:name=".activity.RegisterActivity" />
         <activity android:name=".Neighborhood.MessageActivity" />
         <activity android:name=".activity.WeatherActivity" />
         <activity android:name=".activity.PropertyActivity" />
         <activity android:name=".activity.ParkActivity" />
         <activity android:name=".activity.ElectricActivity" />
-        <activity android:name=".activity.NewsActivity" />
+        <activity android:name=".Neighborhood.NewsActivity" />
         <activity android:name=".Neighborhood.NeighborCircleActivity" />
         <activity android:name=".activity.GasActivity" />
         <activity android:name=".activity.WaterActivity" />
@@ -83,7 +85,9 @@
         <activity android:name=".activity.GasApplyActivity" />
         <activity android:name=".activity.ParkApplyActivity" />
         <activity android:name=".activity.WaterApplyActivity" />
-        <activity android:name=".Map.MapActivity"/>
+        <activity android:name=".Map.MapActivity" />
+        <activity android:name=".activity.AsideActivity" />
+        <activity android:name=".Neighborhood.HealthActivity"></activity>
     </application>
 
 </manifest>

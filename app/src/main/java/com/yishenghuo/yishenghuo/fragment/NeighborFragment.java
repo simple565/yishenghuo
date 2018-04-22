@@ -13,12 +13,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.oragee.banners.BannerView;
+import com.yishenghuo.yishenghuo.Neighborhood.HealthActivity;
 import com.yishenghuo.yishenghuo.R;
 import com.yishenghuo.yishenghuo.Neighborhood.DynamicActivity;
 import com.yishenghuo.yishenghuo.Neighborhood.NeighborCircleActivity;
 import com.yishenghuo.yishenghuo.Neighborhood.NeighborsActivity;
 import com.yishenghuo.yishenghuo.ui.TitleBar;
-import com.yishenghuo.yishenghuo.activity.NewsActivity;
+import com.yishenghuo.yishenghuo.Neighborhood.NewsActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -76,7 +77,7 @@ public class NeighborFragment extends Fragment {
         hot_topic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(), "热门话题", Toast.LENGTH_LONG).show();
+                startActivity ( new Intent ( getActivity (), HealthActivity.class ) );
             }
         });
 

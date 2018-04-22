@@ -39,11 +39,12 @@ public class NewsModel extends BaseModel {
 
                     @Override
                     public void onError(Throwable e) {
-
+                        mDisposable.dispose ();
                     }
 
                     @Override
                     public void onComplete() {
+                        mDisposable.dispose ();
                         Log.e ( "测试", "onComplete " + mDisposable.isDisposed () );
                     }
                 } );
