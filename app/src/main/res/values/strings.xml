@@ -57,7 +57,7 @@
 
     <string name="service_property">小区物业</string>
     <string name="service_property_announce">物业通告</string>
-    <string name="service_announce">小区通告</string>
+    <string name="service_announce">物业电话</string>
     <string name="service_complaints">投诉</string>
     <string name="service_repair">报修</string>
 
