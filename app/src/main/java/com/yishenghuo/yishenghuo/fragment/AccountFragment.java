@@ -11,7 +11,8 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 
 import com.yishenghuo.yishenghuo.R;
-import com.yishenghuo.yishenghuo.ServiceSupport.FeedbackActivity;
+import com.yishenghuo.yishenghuo.activity.About_meActivity;
+import com.yishenghuo.yishenghuo.activity.FeedbackActivity;
 import com.yishenghuo.yishenghuo.activity.SettingActivity;
 import com.yishenghuo.yishenghuo.ui.TitleBar;
 
@@ -60,7 +61,7 @@ public class AccountFragment extends Fragment {
         rl_about.setOnClickListener ( new View.OnClickListener () {
             @Override
             public void onClick(View v) {
-                startActivity ( new Intent ( getActivity (), FeedbackActivity.class ) );
+                startActivity ( new Intent ( getActivity (), About_meActivity.class ) );
             }
         } );
     }

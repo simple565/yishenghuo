@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -44,6 +45,12 @@ public class SettingActivity extends AppCompatActivity implements View.OnClickLi
         rl_community.setOnClickListener ( this );
         Button btn_quit = findViewById ( R.id.setting_btn_quit );
         btn_quit.setOnClickListener ( this );
+        ImageView iv_favicon = findViewById(R.id.setting_iv_favicon);
+        iv_favicon.setOnClickListener(this);
+        RelativeLayout changePassword = findViewById(R.id.setting_layout_changePassword);
+        changePassword.setOnClickListener(this);
+        RelativeLayout layout_changePhone = findViewById(R.id.setting_layout_changePhone);
+        layout_changePhone.setOnClickListener(this);
 
     }
 
@@ -57,6 +64,15 @@ public class SettingActivity extends AppCompatActivity implements View.OnClickLi
                 break;
             case R.id.setting_layout_community:
                 startActivity ( new Intent ( this, MapActivity.class ) );
+                break;
+            case R.id.setting_iv_favicon:
+                startActivity(new Intent (this,InformationActivity.class));
+                break;
+            case  R.id.setting_layout_changePassword:
+                startActivity(new Intent(this,Change_passwordActivity.class));
+                break;
+            case R.id.setting_layout_changePhone:
+                startActivity(new Intent(this,Binding_phoneActivity.class));
                 break;
             default:
                 break;

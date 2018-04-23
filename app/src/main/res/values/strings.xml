@@ -203,4 +203,21 @@
     <string name="property_time3">14:30pm - 17:30pm</string>
     <string name="property_phone">物业公司电话：</string>
     <string name="property_phone2">0591-xxxxxxx</string>
+
+    <!--修改密码-->
+    <string name="new_password">请输入新密码</string>
+    <string name="old_password">请输入旧密码</string>
+    <string name="new_password2">请再次输入新密码</string>
+
+    <!--绑定手机号-->
+    <string name="binding_phone">请输入你的手机号</string>
+    <string name="send_verification_code">发送验证码</string>
+    <string name="print_verification_code">请输入验证码</string>
+
+    <!--意见建议-->
+    <string name="feedback_nei">若您对我们有什么意见或者建议也请告诉我们</string>
+
+    <!--我的资料-->
+    <string name="name">皮卡丘的妙蛙种子</string>
+    <string name="signature">我的签名</string>
 </resources>

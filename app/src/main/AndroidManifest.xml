@@ -31,7 +31,6 @@
     <!-- 访问网络，网络定位需要上网 -->
     <uses-permission android:name="android.permission.INTERNET" />
 
-
     <supports-screens
         android:anyDensity="true"
         android:largeScreens="true"
@@ -87,7 +86,7 @@
         <activity android:name=".ServiceSupport.GuessComeActivity" />
         <activity android:name=".activity.BuildingSettingActivity" />
         <activity android:name=".activity.SettingActivity" />
-        <activity android:name=".ServiceSupport.FeedbackActivity" />
+        <activity android:name=".activity.FeedbackActivity" />
         <activity android:name=".Neighborhood.DynamicActivity" />
         <activity android:name=".Neighborhood.NeighborsActivity" />
         <activity android:name=".activity.CommunityActivity" />
@@ -102,6 +101,10 @@
         <activity android:name=".Neighborhood.HealthActivity" />
         <activity android:name=".ServiceSupport.PropertyPhoneActivity" />
         <activity android:name=".ServiceSupport.IllegalityActivity" />
+        <activity android:name=".activity.About_meActivity" />
+        <activity android:name=".activity.Change_passwordActivity" />
+        <activity android:name=".activity.InformationActivity" />
+        <activity android:name=".activity.Binding_phoneActivity"></activity>
     </application>
 
 </manifest>

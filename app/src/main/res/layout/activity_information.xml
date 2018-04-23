@@ -5,19 +5,39 @@
     android:orientation="vertical">
 
     <com.yishenghuo.yishenghuo.UI.TitleBar
-        android:id="@+id/feedback_titlebar"
+        android:id="@+id/information_titlebar"
         android:layout_width="match_parent"
         android:background="@drawable/title_background"
         android:paddingEnd="10dp"
         android:paddingStart="10dp"/>
 
-    <EditText
-        android:layout_width="370dp"
-        android:layout_height="wrap_content"
-        android:hint="@string/feedback_nei"
-        android:textAlignment="center"
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/my_favicon"
+        android:layout_gravity="center"
         android:layout_marginTop="20dp"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
         android:minLines="5"
+        android:hint="@string/signature"
+        android:layout_marginTop="20dp"
         android:layout_gravity="center"/>
 
     <Button
@@ -30,4 +50,3 @@
         android:textColor="@color/white"/>
 
 </LinearLayout>
-
