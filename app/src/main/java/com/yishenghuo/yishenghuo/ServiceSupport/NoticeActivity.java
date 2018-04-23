@@ -1,4 +1,4 @@
-package com.yishenghuo.yishenghuo.activity;
+package com.yishenghuo.yishenghuo.ServiceSupport;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,7 +10,6 @@ import android.widget.ListView;
 
 import com.yishenghuo.yishenghuo.Model.bean.NoticeBean;
 import com.yishenghuo.yishenghuo.Neighborhood.MessageActivity;
-import com.yishenghuo.yishenghuo.Neighborhood.NewsActivity;
 import com.yishenghuo.yishenghuo.R;
 import com.yishenghuo.yishenghuo.adapter.NoticeAdapter;
 import com.yishenghuo.yishenghuo.ui.TitleBar;

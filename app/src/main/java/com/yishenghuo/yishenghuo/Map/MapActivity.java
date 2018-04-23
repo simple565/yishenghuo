@@ -47,7 +47,7 @@ public class MapActivity extends AppCompatActivity implements OnGetGeoCoderResul
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //SDKInitializer.initialize( );
+        //SDKInitializer.initialize( getApplicationContext ());
         setContentView(R.layout.activity_map);
         mRecyclerView= (RecyclerView) findViewById(R.id.id_recyclerview);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -116,6 +116,7 @@ public class MapActivity extends AppCompatActivity implements OnGetGeoCoderResul
         //在activity执行onPause时执行mMapView. onPause ()，实现地图生命周期管理
         mMapView.onPause();
     }
+
     private void initLocation() {
         LocationClientOption option = new LocationClientOption();
         option.setLocationMode(LocationClientOption.LocationMode.Hight_Accuracy

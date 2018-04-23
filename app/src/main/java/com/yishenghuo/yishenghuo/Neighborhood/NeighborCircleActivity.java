@@ -7,8 +7,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.RelativeLayout;
 
+import com.yishenghuo.yishenghuo.DataManager;
 import com.yishenghuo.yishenghuo.R;
 import com.yishenghuo.yishenghuo.ui.TitleBar;
+
+import io.reactivex.Observer;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.disposables.Disposable;
+import io.reactivex.schedulers.Schedulers;
 
 /**
  * author Lian
@@ -49,6 +55,31 @@ public class NeighborCircleActivity extends AppCompatActivity {
             public void onRefresh() {
                 mRelativeLayout.setVisibility(View.VISIBLE);
                 mSwipeRefreshLayout.setRefreshing(false);
+                DataManager.getInstance ().getApiService ()
+                        .getNeighborDynamic ( "8" )
+                        .subscribeOn ( Schedulers.io () )
+                        .observeOn ( AndroidSchedulers.mainThread () )
+                        .subscribe ( new Observer <String> () {
+                            @Override
+                            public void onSubscribe(Disposable d) {
+
+                            }
+
+                            @Override
+                            public void onNext(String s) {
+
+                            }
+
+                            @Override
+                            public void onError(Throwable e) {
+
+                            }
+
+                            @Override
+                            public void onComplete() {
+
+                            }
+                        } );
             }
         });
 

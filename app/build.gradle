@@ -16,6 +16,10 @@ android {
     }
     signingConfigs {
         confige {
+            keyAlias 'keytoyishenghuo'
+            keyPassword 'yishenghuo'
+            storeFile file('D:/yishenghuokey.jks')
+            storePassword 'yishenghuo'
         }
     }
     sourceSets {

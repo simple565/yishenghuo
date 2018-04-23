@@ -39,6 +39,7 @@ public class NewsModel extends BaseModel {
 
                     @Override
                     public void onError(Throwable e) {
+                        Log.e ( "测试", "onError " + mDisposable.isDisposed () );
                         mDisposable.dispose ();
                     }
 

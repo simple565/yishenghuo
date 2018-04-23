@@ -10,22 +10,22 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.yishenghuo.yishenghuo.R;
-import com.yishenghuo.yishenghuo.activity.ApplianceRepairActivity;
-import com.yishenghuo.yishenghuo.activity.ComplainActivity;
+import com.yishenghuo.yishenghuo.ServiceSupport.ApplianceRepairActivity;
+import com.yishenghuo.yishenghuo.ServiceSupport.ComplainActivity;
 import com.yishenghuo.yishenghuo.activity.ElectricApplyActivity;
-import com.yishenghuo.yishenghuo.activity.EntranceActivity;
+import com.yishenghuo.yishenghuo.ServiceSupport.EntranceActivity;
 import com.yishenghuo.yishenghuo.activity.GasApplyActivity;
-import com.yishenghuo.yishenghuo.activity.HouseKeepingActivity;
+import com.yishenghuo.yishenghuo.ServiceSupport.HouseKeepingActivity;
 import com.yishenghuo.yishenghuo.Neighborhood.MessageActivity;
-import com.yishenghuo.yishenghuo.activity.NoticeActivity;
+import com.yishenghuo.yishenghuo.ServiceSupport.NoticeActivity;
 import com.yishenghuo.yishenghuo.activity.ParkApplyActivity;
 import com.yishenghuo.yishenghuo.activity.PropertyApplyActivity;
-import com.yishenghuo.yishenghuo.activity.Property_phoneActivity;
-import com.yishenghuo.yishenghuo.activity.RepairsActivity;
-import com.yishenghuo.yishenghuo.activity.WashingActivity;
+import com.yishenghuo.yishenghuo.ServiceSupport.PropertyPhoneActivity;
+import com.yishenghuo.yishenghuo.ServiceSupport.RepairsActivity;
+import com.yishenghuo.yishenghuo.ServiceSupport.WashingActivity;
 import com.yishenghuo.yishenghuo.activity.WaterApplyActivity;
 import com.yishenghuo.yishenghuo.ui.TitleBar;
-import com.yishenghuo.yishenghuo.activity.WeatherActivity;
+import com.yishenghuo.yishenghuo.ServiceSupport.WeatherActivity;
 
 
 public class ServiceFragment extends Fragment implements View.OnClickListener {
@@ -106,7 +106,7 @@ public class ServiceFragment extends Fragment implements View.OnClickListener {
                 startActivity(new Intent(getActivity(), NoticeActivity.class));
                 break;
             case R.id.service_tv_announce:
-                startActivity(new Intent(getActivity(), Property_phoneActivity.class));
+                startActivity(new Intent(getActivity(), PropertyPhoneActivity.class));
                 break;
             case R.id.service_tv_complain:
                 startActivity ( new Intent ( getActivity (), ComplainActivity.class ) );

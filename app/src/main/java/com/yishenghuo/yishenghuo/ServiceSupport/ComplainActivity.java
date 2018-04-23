@@ -1,4 +1,4 @@
-package com.yishenghuo.yishenghuo.activity;
+package com.yishenghuo.yishenghuo.ServiceSupport;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,18 +8,18 @@ import android.view.View;
 import com.yishenghuo.yishenghuo.R;
 import com.yishenghuo.yishenghuo.ui.TitleBar;
 
-public class RepairsActivity extends AppCompatActivity {
+public class ComplainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate ( savedInstanceState );
-        setContentView ( R.layout.activity_repair );
+        setContentView ( R.layout.activity_complain );
         iniView ();
     }
 
     public void iniView() {
-        TitleBar mTitleBar = (TitleBar) findViewById ( R.id.repair_titlebar );
-        mTitleBar.setText ( "报修" );
+        TitleBar mTitleBar = (TitleBar) findViewById ( R.id.complain_titlebar );
+        mTitleBar.setText ( "投诉" );
         mTitleBar.setLeftButton ( R.drawable.ic_arrow_left );
         mTitleBar.setLeftButtonClickListener ( new View.OnClickListener () {
             @Override

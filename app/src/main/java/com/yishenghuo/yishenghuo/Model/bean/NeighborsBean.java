@@ -1,5 +1,10 @@
 package com.yishenghuo.yishenghuo.Model.bean;
 
+/**
+ * @author Lian
+ * @create 2017/5/22
+ * @Describe 邻居数据模型
+ */
 public class NeighborsBean {
     private String nickname;
     private String faviconURL;

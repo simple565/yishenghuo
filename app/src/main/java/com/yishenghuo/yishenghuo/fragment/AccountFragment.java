@@ -11,11 +11,9 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 
 import com.yishenghuo.yishenghuo.R;
-import com.yishenghuo.yishenghuo.activity.FeedbackActivity;
+import com.yishenghuo.yishenghuo.ServiceSupport.FeedbackActivity;
 import com.yishenghuo.yishenghuo.activity.SettingActivity;
 import com.yishenghuo.yishenghuo.ui.TitleBar;
-
-import okhttp3.internal.connection.RealConnection;
 
 public class AccountFragment extends Fragment {
     private TitleBar mTitleBar;

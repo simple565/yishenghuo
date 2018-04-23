@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
+import com.baidu.mapapi.SDKInitializer;
 import com.yishenghuo.yishenghuo.R;
 import com.yishenghuo.yishenghuo.fragment.AccountFragment;
 import com.yishenghuo.yishenghuo.fragment.HomeFragment;
@@ -40,7 +41,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate ( savedInstanceState );
         setContentView ( R.layout.activity_main );
-
 
         iniView ();
         /**

@@ -17,7 +17,7 @@ public class NewsPresenter implements DataCallBack<NewsBean>{
     }
 
     public void showNews() {
-        mNewsModel.getNews ( ApiService.NEWS_BASE_URL,this );
+        mNewsModel.getNews ( "44239bc79ecdc150" ,this );
     }
 
 
