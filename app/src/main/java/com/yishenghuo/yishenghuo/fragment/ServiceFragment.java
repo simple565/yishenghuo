@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.yishenghuo.yishenghuo.R;
 import com.yishenghuo.yishenghuo.ServiceSupport.ApplianceRepairActivity;
 import com.yishenghuo.yishenghuo.ServiceSupport.ComplainActivity;
+import com.yishenghuo.yishenghuo.ServiceSupport.IllegalityActivity;
 import com.yishenghuo.yishenghuo.activity.ElectricApplyActivity;
 import com.yishenghuo.yishenghuo.ServiceSupport.EntranceActivity;
 import com.yishenghuo.yishenghuo.activity.GasApplyActivity;
@@ -85,6 +86,8 @@ public class ServiceFragment extends Fragment implements View.OnClickListener {
         //便民消息
         TextView mtv_weather = (TextView) view.findViewById ( R.id.service_tv_weatherquery );
         mtv_weather.setOnClickListener ( this );
+        TextView mtv_trafficquery = (TextView) view.findViewById(R.id.service_tv_trafficquery);
+        mtv_trafficquery.setOnClickListener(this);
     }
 
     @Override
@@ -131,6 +134,9 @@ public class ServiceFragment extends Fragment implements View.OnClickListener {
                 break;
             case R.id.service_tv_parkingfee:
                 startActivity ( new Intent ( getActivity (), ParkApplyActivity.class ) );
+                break;
+            case R.id.service_tv_trafficquery:
+                startActivity(new Intent(getActivity(), IllegalityActivity.class));
                 break;
             default:
                 break;

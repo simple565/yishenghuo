@@ -220,4 +220,22 @@
     <!--我的资料-->
     <string name="name">皮卡丘的妙蛙种子</string>
     <string name="signature">我的签名</string>
+
+    <!--关于我们-->
+    <string name="version">版本号 1.0.0</string>
+    <string name="service_tel">客服电话</string>
+    <string name="grade">去评分</string>
+    <string name="yi_protocol">易生活协议</string>
+    <string name="update_version">版本更新</string>
+
+    <!--违规停车-->
+    <string name="license_plate">车牌号</string>
+    <string name="license_plate1">车牌号后五位</string>
+    <string name="car_class">车辆类型</string>
+    <string name="car_engine">发动机号码</string>
+    <string name="car_engine_number">请输入发动机号码后六位</string>
+    <string name="car_carriage">车架号码</string>
+    <string name="car_carriage_num">请输入车架号码后六位</string>
+
+
 </resources>

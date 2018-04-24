@@ -1,9 +1,118 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ServiceSupport.IllegalityActivity">
+    android:background="@color/page_background"
+    android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+    <com.yishenghuo.yishenghuo.ui.TitleBar
+        android:id="@+id/illegality_titlebar"
+        style="@style/TitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/TitleBar" />
+
+    <TextView
+        android:id="@+id/license_plate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/license_plate"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp">
+
+        <Spinner
+            android:id="@+id/car_providence"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:entries="@array/providence"
+            />
+
+        <Spinner
+            android:id="@+id/car_letter"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:entries="@array/alphabet"
+            />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/car_number"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:hint="@string/license_plate1"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/car_class"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/car_class"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"/>
+
+    <Spinner
+        android:id="@+id/car_number2"
+        android:layout_width="250dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:entries="@array/car_class"/>
+
+    <TextView
+        android:id="@+id/car_engine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/car_engine"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"/>
+
+    <EditText
+        android:id="@+id/car_engine_num"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:hint="@string/car_engine_number"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/car_carriage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/car_carriage"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"/>
+
+    <EditText
+        android:id="@+id/car_carriage_num"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:hint="@string/car_carriage_num"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/car_the_next"
+        android:layout_width="245dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_shape"
+        android:text="@string/the_next"
+        android:textColor="@color/white"
+        android:textSize="23sp"/>
+
+</LinearLayout>
