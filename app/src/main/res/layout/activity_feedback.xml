@@ -4,20 +4,25 @@
     android:background="@color/page_background"
     android:orientation="vertical">
 
-    <com.yishenghuo.yishenghuo.ui.TitleBar
+    <com.maureen.yishenghuo.ui.TitleBar
         android:id="@+id/feedback_titlebar"
+        style="@style/TitleBar"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/TitleBar"
-        style="@style/TitleBar"/>
+        android:layout_height="@dimen/TitleBar" />
 
     <EditText
-        android:layout_width="370dp"
-        android:layout_height="wrap_content"
-        android:hint="@string/feedback_nei"
-        android:textAlignment="center"
+        android:background="@drawable/edt_bg_rectangle"
+        android:padding="5dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
         android:layout_marginTop="20dp"
+        android:hint="@string/feedback_nei"
+        android:inputType="text"
+        android:maxEms="20"
         android:minLines="5"
-        android:layout_gravity="center"/>
+        android:gravity="top" />
 
     <Button
         android:layout_width="@dimen/account_button_quit"
@@ -26,7 +31,7 @@
         android:layout_marginTop="50dp"
         android:background="@drawable/account_quit_backgound"
         android:text="@string/submit"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white" />
 
 </LinearLayout>
 

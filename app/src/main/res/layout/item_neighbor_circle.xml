@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="18dp">
+
+    <ImageView
+        android:id="@+id/item_neighbor_circle_icon"
+        android:layout_width="@dimen/icon_large"
+        android:layout_height="@dimen/icon_large" />
+
+    <TextView
+        android:id="@+id/item_neighbor_circle_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/item_neighbor_circle_icon"
+        android:textColor="@color/neighbor_circle_nickname" />
+
+    <cn.carbs.android.expandabletextview.library.ExpandableTextView
+        android:id="@+id/item_neighbor_circle_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_neighbor_circle_nickname"
+        android:layout_margin="10dp"
+        android:layout_toEndOf="@id/item_neighbor_circle_icon" />
+
+    <ImageButton
+        android:id="@+id/item_neighbor_circle_add_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/ic_comment" />
+
+</RelativeLayout>

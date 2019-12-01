@@ -4,40 +4,40 @@
     android:background="@color/page_background"
     android:orientation="vertical">
 
-    <com.yishenghuo.yishenghuo.ui.TitleBar
+    <com.maureen.yishenghuo.ui.TitleBar
         android:id="@+id/entrance_titlebar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/TitleBar"
         android:background="@drawable/title_background"
         android:paddingEnd="10dp"
-        android:paddingStart="10dp"/>
+        android:paddingStart="10dp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/guess_come1"
-        android:textSize="18sp"
         android:layout_marginStart="14sp"
-        android:layout_marginTop="10sp" />
+        android:layout_marginTop="10sp"
+        android:text="@string/guess_come1"
+        android:textSize="18sp" />
 
     <Button
-        android:id="@+id/entrance_btn_"
+        android:id="@+id/entrance_btn_access"
         android:layout_width="160sp"
         android:layout_height="wrap_content"
-        android:text="@string/guess_come2"
         android:layout_gravity="center"
-        android:textSize="16sp"
         android:layout_marginTop="10sp"
         android:background="@drawable/btn_shape"
-        android:textColor="@color/white"/>
+        android:text="@string/guess_come2"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="14sp"
+        android:layout_marginTop="10sp"
         android:text="@string/gate"
-        android:layout_marginStart="14sp"
-        android:layout_marginTop="10sp"
-        android:textSize="18sp"/>
+        android:textSize="18sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -45,27 +45,29 @@
         android:gravity="center">
 
         <Button
+            android:id="@+id/entrance_btn_main_door"
             android:layout_width="160sp"
             android:layout_height="wrap_content"
-            android:text="@string/gate_introduce1"
             android:layout_gravity="center"
-            android:layout_marginTop="10sp"
-            android:textSize="16sp"
             android:layout_marginBottom="10sp"
+            android:layout_marginTop="10sp"
             android:background="@drawable/btn_shape"
-            android:textColor="@color/white"/>
+            android:text="@string/gate_introduce1"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
 
         <Button
+            android:id="@+id/entrance_btn_aside_door"
             android:layout_width="160sp"
             android:layout_height="wrap_content"
-            android:text="@string/gate_introduce2"
             android:layout_gravity="center"
-            android:layout_marginTop="10sp"
-            android:layout_marginLeft="14sp"
-            android:textSize="16sp"
             android:layout_marginBottom="10sp"
+            android:layout_marginStart="14sp"
+            android:layout_marginTop="10sp"
             android:background="@drawable/btn_shape"
-            android:textColor="@color/white"/>
+            android:text="@string/gate_introduce2"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
 
     </LinearLayout>
 
@@ -75,72 +77,74 @@
         android:gravity="center">
 
         <Button
+            android:id="@+id/entrance_btn_north_door"
             android:layout_width="160sp"
             android:layout_height="wrap_content"
-            android:text="@string/gate_introduce3"
             android:layout_gravity="center"
-            android:layout_marginTop="10sp"
-            android:textSize="16sp"
             android:layout_marginBottom="10sp"
+            android:layout_marginTop="10sp"
             android:background="@drawable/btn_shape"
-            android:textColor="@color/white"/>
+            android:text="@string/gate_introduce3"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
 
         <Button
+            android:id="@+id/entrance_btn_department_door"
             android:layout_width="160sp"
             android:layout_height="wrap_content"
-            android:text="@string/gate_introduce4"
             android:layout_gravity="center"
-            android:layout_marginTop="10sp"
-            android:layout_marginLeft="14sp"
             android:layout_marginBottom="10sp"
-            android:textSize="16sp"
+            android:layout_marginStart="14sp"
+            android:layout_marginTop="10sp"
             android:background="@drawable/btn_shape"
-            android:textColor="@color/white"/>
+            android:text="@string/gate_introduce4"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
 
     </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/passageway"
         android:layout_marginStart="14sp"
         android:layout_marginTop="10sp"
-        android:textSize="18sp"/>
+        android:text="@string/passageway"
+        android:textSize="18sp" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="12"
         android:layout_gravity="center"
-        android:layout_marginTop="10sp"
         android:layout_marginBottom="10sp"
+        android:layout_marginTop="10sp"
+        android:ems="12"
         android:text="@string/passageway2" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/feedback"
         android:layout_marginStart="14sp"
         android:layout_marginTop="10sp"
-        android:textSize="18sp"/>
+        android:text="@string/feedback"
+        android:textSize="18sp" />
 
     <Button
         android:layout_width="160sp"
         android:layout_height="wrap_content"
-        android:text="@string/door_feedback"
         android:layout_gravity="center"
-        android:textSize="16sp"
         android:layout_marginTop="10sp"
         android:background="@drawable/btn_shape"
-        android:textColor="@color/white"/>
+        android:text="@string/door_feedback"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10sp"
-        android:layout_marginRight="12sp"
         android:layout_marginLeft="12sp"
-        android:text="@string/warm_prompt"/>
+        android:layout_marginRight="12sp"
+        android:layout_marginTop="10sp"
+        android:text="@string/warm_prompt" />
 
 
 </LinearLayout>

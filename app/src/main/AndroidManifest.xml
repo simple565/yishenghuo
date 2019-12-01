@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.yishenghuo.yishenghuo">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.maureen.yishenghuo">
 
-    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <!-- 用于进行网络定位 -->
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <!-- 用于访问GPS定位 -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <!-- 用于访问网络，网络定位需要上网 -->
     <uses-permission android:name="android.permission.INTERNET" />
     <!-- 这个权限用于进行网络定位 -->
@@ -22,14 +16,8 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-    <!-- 用于读取手机当前的状态 -->
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <!-- 访问网络，网络定位需要上网 -->
-    <uses-permission android:name="android.permission.INTERNET" />
 
     <supports-screens
         android:anyDensity="true"
@@ -44,7 +32,7 @@
         android:required="true" />
 
     <application
-        android:name=".base.BaseApplication"
+        android:name="com.maureen.yishenghuo.base.BaseApplication"
         android:allowBackup="true"
         android:fullBackupContent="true"
         android:hardwareAccelerated="true"
@@ -52,14 +40,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <meta-data
-            android:name="com.baidu.lbsapi.API_KEY"
-            android:value="sMXKELObGt3scowALDrB8Q6uAxW6sqmG" />
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
 
-        <activity android:name=".activity.LoginActivity" />
+        <activity android:name="com.maureen.yishenghuo.activity.LoginActivity" />
         <activity
-            android:name=".activity.MainActivity"
+            android:name="com.maureen.yishenghuo.activity.MainActivity"
             android:windowSoftInputMode="stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -67,44 +53,44 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.RegisterActivity" />
-        <activity android:name=".Neighborhood.MessageActivity" />
-        <activity android:name=".ServiceSupport.WeatherActivity" />
-        <activity android:name=".activity.PropertyActivity" />
-        <activity android:name=".activity.ParkActivity" />
-        <activity android:name=".activity.ElectricActivity" />
-        <activity android:name=".Neighborhood.NewsActivity" />
-        <activity android:name=".Neighborhood.NeighborCircleActivity" />
-        <activity android:name=".activity.GasActivity" />
-        <activity android:name=".activity.WaterActivity" />
-        <activity android:name=".ServiceSupport.RepairsActivity" />
-        <activity android:name=".ServiceSupport.ComplainActivity" />
-        <activity android:name=".ServiceSupport.HouseKeepingActivity" />
-        <activity android:name=".ServiceSupport.ApplianceRepairActivity" />
-        <activity android:name=".ServiceSupport.WashingActivity" />
-        <activity android:name=".ServiceSupport.EntranceActivity" />
-        <activity android:name=".ServiceSupport.GuessComeActivity" />
-        <activity android:name=".activity.BuildingSettingActivity" />
-        <activity android:name=".activity.SettingActivity" />
-        <activity android:name=".activity.FeedbackActivity" />
-        <activity android:name=".Neighborhood.DynamicActivity" />
-        <activity android:name=".Neighborhood.NeighborsActivity" />
-        <activity android:name=".activity.CommunityActivity" />
-        <activity android:name=".activity.ElectricApplyActivity" />
-        <activity android:name=".activity.PropertyApplyActivity" />
-        <activity android:name=".activity.GasApplyActivity" />
-        <activity android:name=".activity.ParkApplyActivity" />
-        <activity android:name=".activity.WaterApplyActivity" />
-        <activity android:name=".Map.MapActivity" />
-        <activity android:name=".ServiceSupport.AsideActivity" />
-        <activity android:name=".ServiceSupport.NoticeActivity" />
-        <activity android:name=".Neighborhood.HealthActivity" />
-        <activity android:name=".ServiceSupport.PropertyPhoneActivity" />
-        <activity android:name=".ServiceSupport.IllegalityActivity" />
-        <activity android:name=".activity.About_meActivity" />
-        <activity android:name=".activity.Change_passwordActivity" />
-        <activity android:name=".activity.InformationActivity" />
-        <activity android:name=".activity.Binding_phoneActivity"></activity>
+        <activity android:name="com.maureen.yishenghuo.activity.RegisterActivity" />
+        <activity android:name="com.maureen.yishenghuo.neighborhood.MessageActivity" />
+        <activity android:name="com.maureen.yishenghuo.servicesupport.WeatherActivity" />
+        <activity android:name="com.maureen.yishenghuo.activity.PropertyActivity" />
+        <activity android:name="com.maureen.yishenghuo.activity.ParkActivity" />
+        <activity android:name="com.maureen.yishenghuo.activity.ElectricActivity" />
+        <activity android:name="com.maureen.yishenghuo.neighborhood.NewsActivity" />
+        <activity android:name="com.maureen.yishenghuo.neighborhood.NeighborCircleActivity" />
+        <activity android:name="com.maureen.yishenghuo.activity.GasActivity" />
+        <activity android:name="com.maureen.yishenghuo.activity.WaterActivity" />
+        <activity android:name="com.maureen.yishenghuo.servicesupport.RepairsActivity" />
+        <activity android:name="com.maureen.yishenghuo.servicesupport.ComplainActivity" />
+        <activity android:name="com.maureen.yishenghuo.servicesupport.HouseKeepingActivity" />
+        <activity android:name="com.maureen.yishenghuo.servicesupport.ApplianceRepairActivity" />
+        <activity android:name="com.maureen.yishenghuo.servicesupport.WashingActivity" />
+        <activity android:name="com.maureen.yishenghuo.servicesupport.EntranceActivity" />
+        <activity android:name="com.maureen.yishenghuo.servicesupport.GuessComeActivity" />
+        <activity android:name="com.maureen.yishenghuo.activity.BuildingSettingActivity" />
+        <activity android:name="com.maureen.yishenghuo.activity.SettingActivity" />
+        <activity android:name="com.maureen.yishenghuo.activity.FeedbackActivity" />
+        <activity android:name="com.maureen.yishenghuo.neighborhood.DynamicActivity" />
+        <activity android:name="com.maureen.yishenghuo.neighborhood.NeighborsActivity" />
+        <activity android:name="com.maureen.yishenghuo.activity.CommunityActivity" />
+        <activity android:name="com.maureen.yishenghuo.activity.ElectricApplyActivity" />
+        <activity android:name="com.maureen.yishenghuo.activity.PropertyApplyActivity" />
+        <activity android:name="com.maureen.yishenghuo.activity.GasApplyActivity" />
+        <activity android:name="com.maureen.yishenghuo.activity.ParkApplyActivity" />
+        <activity android:name="com.maureen.yishenghuo.activity.WaterApplyActivity" />
+        <activity android:name="com.maureen.yishenghuo.servicesupport.AsideActivity" />
+        <activity android:name="com.maureen.yishenghuo.servicesupport.NoticeActivity" />
+        <activity android:name="com.maureen.yishenghuo.neighborhood.HealthActivity" />
+        <activity android:name="com.maureen.yishenghuo.servicesupport.PropertyPhoneActivity" />
+        <activity android:name="com.maureen.yishenghuo.servicesupport.IllegalityActivity" />
+        <activity android:name="com.maureen.yishenghuo.activity.AboutUsActivity" />
+        <activity android:name="com.maureen.yishenghuo.neighborhood.ContactsActivity" />
+        <activity android:name="com.maureen.yishenghuo.activity.ChangePasswordActivity" />
+        <activity android:name="com.maureen.yishenghuo.activity.InformationActivity" />
+        <activity android:name="com.maureen.yishenghuo.activity.BindingPhoneActivity" />
     </application>
 
 </manifest>

@@ -46,12 +46,13 @@ public class MainActivity extends BaseActivity implements BottomNavigationBar.On
         mServiceFragment = new ServiceFragment();
         mAccountFragment = new AccountFragment();
         BottomNavigationBar bottomNavigationBar = findViewById(R.id.main_navigation_bar);
-        bottomNavigationBar.addItem(new BottomNavigationItem(R.drawable.icon_home_select, "首页"))
-                .addItem(new BottomNavigationItem(R.drawable.icon_neighbor_select, "邻里"))
-                .addItem(new BottomNavigationItem(R.drawable.icon_service_select, "服务"))
-                .addItem(new BottomNavigationItem(R.drawable.icon_account_select, "我的"))
+        bottomNavigationBar.addItem(new BottomNavigationItem(R.mipmap.ic_home_select, "首页"))
+                .addItem(new BottomNavigationItem(R.mipmap.ic_neighbor_select, "邻里"))
+                .addItem(new BottomNavigationItem(R.mipmap.ic_service_select, "服务"))
+                .addItem(new BottomNavigationItem(R.mipmap.ic_account_select, "我的"))
                 .initialise();
         bottomNavigationBar.setTabSelectedListener(this);
+
         turnToFragment(mHomeFragment, R.id.content);
     }
 

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:layout_marginTop="@dimen/activity_vertical_margin"
-              android:background="@color/white"
-              android:orientation="horizontal">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/activity_vertical_margin"
+    android:background="@color/white"
+    android:orientation="horizontal">
 
     <LinearLayout
         android:id="@+id/account_property"
@@ -17,13 +17,12 @@
         <ImageView
             android:layout_width="@dimen/icon_middle"
             android:layout_height="@dimen/icon_middle"
-            android:background="@drawable/my_property"
-            />
+            android:background="@mipmap/ic_my_property" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/my_property"/>
+            android:text="@string/my_property" />
     </LinearLayout>
 
     <LinearLayout
@@ -37,13 +36,12 @@
         <ImageView
             android:layout_width="@dimen/icon_middle"
             android:layout_height="@dimen/icon_middle"
-            android:background="@drawable/my_charge"
-            />
+            android:background="@mipmap/ic_my_charge" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/my_charge"/>
+            android:text="@string/my_charge" />
     </LinearLayout>
 
     <LinearLayout
@@ -57,13 +55,12 @@
         <ImageView
             android:layout_width="@dimen/icon_middle"
             android:layout_height="@dimen/icon_middle"
-            android:background="@drawable/my_repair"
-            />
+            android:background="@mipmap/ic_my_repair" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/my_repair"/>
+            android:text="@string/my_repair" />
     </LinearLayout>
 
     <LinearLayout
@@ -77,13 +74,12 @@
         <ImageView
             android:layout_width="@dimen/icon_middle"
             android:layout_height="@dimen/icon_middle"
-            android:background="@drawable/my_complaints"
-            />
+            android:background="@mipmap/ic_my_complaints" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/my_complaints"/>
+            android:text="@string/my_complaints" />
     </LinearLayout>
 
 </LinearLayout>

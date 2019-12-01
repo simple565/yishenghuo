@@ -4,13 +4,13 @@
     android:background="@color/page_background"
     android:orientation="vertical">
 
-    <com.yishenghuo.yishenghuo.ui.TitleBar
+    <com.maureen.yishenghuo.ui.TitleBar
         android:id="@+id/repair_titlebar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/TitleBar"
         android:background="@drawable/title_background"
         android:paddingEnd="10dp"
-        android:paddingStart="10dp"/>
+        android:paddingStart="10dp" />
 
 
     <LinearLayout
@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:text="@string/repair_problem"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/repair_problem_2"
@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:gravity="center"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
 
     </LinearLayout>
 
@@ -52,7 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:text="@string/detail_explain"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/detail_explain_repair2"
@@ -61,7 +61,7 @@
             android:layout_marginStart="18dp"
             android:gravity="center"
             android:minLines="5"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
 
     </LinearLayout>
 
@@ -74,7 +74,7 @@
         android:layout_gravity="center_horizontal"
         android:text="@string/submit"
         android:textColor="@color/white"
-        android:textSize="23sp"/>
+        android:textSize="23sp" />
 
 </LinearLayout>
 

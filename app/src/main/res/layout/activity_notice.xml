@@ -4,19 +4,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.yishenghuo.yishenghuo.Neighborhood.NewsActivity">
+    tools:context="com.maureen.yishenghuo.neighborhood.NewsActivity">
 
-    <com.yishenghuo.yishenghuo.ui.TitleBar
+    <com.maureen.yishenghuo.ui.TitleBar
         android:id="@+id/notice_titlebar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/TitleBar"
         android:background="@color/title_color"
         android:paddingEnd="10dp"
         android:paddingStart="10dp" />
+
     <ListView
         android:id="@+id/notice_list"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:isScrollContainer="true"/>
+        android:isScrollContainer="true" />
 </LinearLayout>

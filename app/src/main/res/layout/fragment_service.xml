@@ -5,7 +5,7 @@
     android:background="@color/page_background"
     android:orientation="vertical">
 
-    <com.yishenghuo.yishenghuo.ui.TitleBar
+    <com.maureen.yishenghuo.ui.TitleBar
         android:id="@+id/service_titlebar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/TitleBar"
@@ -24,7 +24,7 @@
             android:id="@+id/service_iv_living"
             android:layout_width="@dimen/service_list_icon"
             android:layout_height="wrap_content"
-            android:background="@drawable/living" />
+            android:background="@mipmap/ic_living" />
 
         <TextView
             android:id="@+id/service_tv_living"
@@ -85,7 +85,7 @@
             android:id="@+id/service_iv_property"
             android:layout_width="@dimen/service_list_icon"
             android:layout_height="wrap_content"
-            android:background="@drawable/property" />
+            android:background="@mipmap/ic_property" />
 
         <TextView
             android:id="@+id/service_tv_property"
@@ -146,7 +146,7 @@
             android:id="@+id/service_iv_recharge"
             android:layout_width="@dimen/service_list_icon"
             android:layout_height="wrap_content"
-            android:background="@drawable/recharge" />
+            android:background="@mipmap/ic_recharge" />
 
         <TextView
             android:id="@+id/service_tv_recharge"
@@ -189,9 +189,7 @@
                 style="@style/service_list_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="电费"
-
-                />
+                android:text="电费" />
 
             <TextView
                 android:id="@+id/service_tv_parkingfee"
@@ -215,7 +213,7 @@
             android:id="@+id/service_iv_query"
             android:layout_width="@dimen/service_list_icon"
             android:layout_height="wrap_content"
-            android:background="@drawable/query" />
+            android:background="@mipmap/ic_query" />
 
         <TextView
             android:id="@+id/service_tv_query"
@@ -247,7 +245,7 @@
                 android:text="@string/service_traffic" />
 
             <TextView
-                android:id="@+id/service_tv_communities"
+                android:id="@+id/service_tv_aside"
                 style="@style/service_list_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -269,7 +267,7 @@
             android:id="@+id/service_iv_financial"
             android:layout_width="@dimen/service_list_icon"
             android:layout_height="wrap_content"
-            android:background="@drawable/finance" />
+            android:background="@mipmap/ic_finance" />
 
         <TextView
             android:id="@+id/service_tv_financial"

@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/page_background"
     android:orientation="vertical"
-    tools:context="com.yishenghuo.yishenghuo.Neighborhood.DynamicActivity">
+    tools:context="com.maureen.yishenghuo.neighborhood.DynamicActivity">
 
-    <com.yishenghuo.yishenghuo.ui.TitleBar
+    <com.maureen.yishenghuo.ui.TitleBar
         android:id="@+id/dynamic_titlebar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/TitleBar"
@@ -16,7 +15,7 @@
         android:paddingEnd="10dp"
         android:paddingStart="10dp" />
 
-    <android.support.v4.widget.SwipeRefreshLayout
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/dynamic_swiperefresh"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -26,5 +25,5 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scrollbars="none" />
-    </android.support.v4.widget.SwipeRefreshLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 </LinearLayout>

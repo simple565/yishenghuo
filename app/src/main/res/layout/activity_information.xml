@@ -4,19 +4,19 @@
     android:background="@color/page_background"
     android:orientation="vertical">
 
-    <com.yishenghuo.yishenghuo.ui.TitleBar
+    <com.maureen.yishenghuo.ui.TitleBar
         android:id="@+id/information_titlebar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/TitleBar"
-        style="@style/TitleBar"/>
+        style="@style/TitleBar" />
 
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@drawable/my_favicon"
+        android:src="@mipmap/ic_my_favicon"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        />
+        android:layout_marginTop="20dp" />
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -27,7 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/name"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
 
     </LinearLayout>
 
@@ -37,7 +37,7 @@
         android:minLines="5"
         android:hint="@string/signature"
         android:layout_marginTop="20dp"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center" />
 
     <Button
         android:layout_width="@dimen/account_button_quit"
@@ -46,6 +46,6 @@
         android:layout_marginTop="50dp"
         android:background="@drawable/account_quit_backgound"
         android:text="@string/submit"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white" />
 
 </LinearLayout>

@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.yishenghuo.yishenghuo.ui.TitleBar
+    <com.maureen.yishenghuo.ui.TitleBar
         android:id="@+id/complain_titlebar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/TitleBar"
@@ -16,12 +16,6 @@
         android:layout_width="match_parent"
         android:layout_height="200dp">
 
-        <com.baidu.mapapi.map.MapView
-            android:id="@+id/bmapView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:clickable="true"
-            android:focusable="true"/>
 
         <ImageView
             android:id="@+id/marker"
@@ -32,7 +26,7 @@
             android:src="@drawable/ic_gps" />
     </RelativeLayout>
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/id_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

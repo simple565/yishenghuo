@@ -6,7 +6,7 @@
     <dimen name="navigation_icon">36dp</dimen>
     <dimen name="navigation_horizontal_margin">40dp</dimen>
 
-        <dimen name="TitleBar">40dp</dimen>
+    <dimen name="TitleBar">40dp</dimen>
 
     <dimen name="service_list_icon">50dp</dimen>
     <dimen name="service_list_padding">20dp</dimen>

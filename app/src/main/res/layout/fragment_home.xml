@@ -5,40 +5,48 @@
     android:background="@color/page_background"
     android:orientation="vertical">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="64dp"
         android:background="@drawable/title_background"
-        android:paddingEnd="10dp"
-        android:paddingStart="10dp">
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp">
 
-        <ImageButton
-            android:id="@+id/home_location"
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:background="@drawable/ic_location" />
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="11dp">
 
-        <EditText
-            android:id="@+id/home_edt_search"
-            android:layout_width="250dp"
-            android:layout_height="30dp"
-            android:layout_centerInParent="true"
-            android:background="@drawable/home_edt_bg"
-            android:cursorVisible="false"
-            android:drawableStart="@drawable/ic_search"
-            android:paddingEnd="10dp"
-            android:paddingStart="10dp" />
+            <ImageButton
+                android:id="@+id/home_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_location" />
 
-        <ImageButton
-            android:id="@+id/home_title_message"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:background="@drawable/ic_message_white" />
+            <EditText
+                android:id="@+id/home_edt_search"
+                android:layout_width="250dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/home_edt_bg"
+                android:cursorVisible="false"
+                android:drawableStart="@drawable/ic_search"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp" />
 
-    </RelativeLayout>
+            <ImageButton
+                android:id="@+id/home_title_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_message_white" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
 
     <com.oragee.banners.BannerView
         android:id="@+id/home_bannerview"
@@ -47,146 +55,126 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:background="#FFFFFF"
-        android:paddingBottom="10dp"
-        android:paddingEnd="20dp"
-        android:paddingStart="20dp"
-        android:paddingTop="10dp">
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="4dp">
 
-        <ImageView
-            android:id="@+id/home_btn_entrance"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+        <LinearLayout
+            android:id="@+id/home_ll_entrance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:scaleType="fitCenter"
-            android:src="@drawable/home_entrance" />
+            android:gravity="center"
+            android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/home_btn_notification"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="30dp"
-            android:layout_weight="1"
-            android:scaleType="fitCenter"
-            android:src="@drawable/home_notification" />
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/ic_home_entrance" />
 
-        <ImageView
-            android:id="@+id/home_btn_payment"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="30dp"
-            android:layout_weight="1"
-            android:scaleType="fitCenter"
-            android:src="@drawable/home_payment" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="@string/entrance_system" />
+        </LinearLayout>
 
-        <ImageView
-            android:id="@+id/home_btn_repair"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="30dp"
+        <LinearLayout
+            android:id="@+id/home_ll_notification"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:scaleType="fitCenter"
-            android:src="@drawable/home_repair" />
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/ic_home_notification" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="@string/notification" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/home_ll_payment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/ic_home_payment" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="@string/property_charge" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/home_ll_repair"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/ic_home_repair" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="@string/property_repair" />
+        </LinearLayout>
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="@string/entrance_system" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="@string/notification" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="@string/property_charge" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="@string/property_repair" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
         android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
         android:background="#FFFFFF"
         android:orientation="horizontal"
-        android:paddingEnd="5dp"
-        android:paddingStart="5dp">
+        android:padding="6dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:paddingBottom="5dp"
-            android:paddingTop="5dp"
             android:text="@string/hot"
             android:textColor="@color/title_color"
             android:textStyle="bold" />
 
-        <!--<anylife.scrolltextview.ScrollTextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />-->
-
     </LinearLayout>
 
-    <!--  <LinearLayout
-         android:layout_width="match_parent"
-         android:layout_height="0dp"
-         android:layout_marginTop="3dp"
-         android:layout_weight="1"
-         android:background="#FFFFFF"
-         android:orientation="vertical"
-         android:paddingEnd="5dp"
-         android:paddingStart="5dp"
-         android:paddingTop="5dp">
-         <TextView
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="@string/on_sale"
-             android:textColor="@color/title_color"
-             android:textStyle="bold" />
-
-         <GridView
-             android:id="@+id/home_gv_goods"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             android:horizontalSpacing="5dp"
-             android:numColumns="4"
-             android:padding="5dp"
-             android:scrollbars="none"
-             android:verticalSpacing="5dp" />
-     </LinearLayout>-->
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:layout_weight="1"
+        android:layout_height="180dp"
         android:background="@color/white"
-        android:paddingBottom="5dp"
-        android:paddingEnd="10dp"
         android:paddingStart="5dp"
-        android:paddingTop="5dp">
+        android:paddingTop="5dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="5dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -196,30 +184,23 @@
             android:textColor="@color/title_color"
             android:textStyle="bold" />
 
-        <ImageView
-            android:id="@+id/home_activity_icon"
-            android:layout_width="@dimen/icon_large"
-            android:layout_height="@dimen/icon_large"
-            android:layout_marginStart="8dp"
-            android:layout_centerVertical="true"
-            android:background="@color/colorPrimary" />
-
         <TextView
             android:id="@+id/home_activity_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@id/home_activity_icon"
+            android:layout_centerInParent="true"
             android:layout_marginStart="@dimen/activity_horizontal_margin"
-            android:layout_toEndOf="@id/home_activity_icon"
-            android:textSize="18sp" />
+            android:text="暂无活动"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/home_activity_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@id/home_activity_icon"
             android:layout_alignParentEnd="true"
-            android:layout_marginEnd="10dp" />
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="10dp"
+            android:text="2018-04-25" />
     </RelativeLayout>
 
     <ImageView

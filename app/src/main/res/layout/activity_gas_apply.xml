@@ -4,13 +4,13 @@
     android:background="@color/page_background"
     android:orientation="vertical">
 
-    <com.yishenghuo.yishenghuo.ui.TitleBar
+    <com.maureen.yishenghuo.ui.TitleBar
         android:id="@+id/gas_apply_titlebar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/TitleBar"
         android:background="@drawable/title_background"
         android:paddingEnd="10dp"
-        android:paddingStart="10dp"/>
+        android:paddingStart="10dp" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -25,7 +25,7 @@
             android:layout_centerInParent="true"
             android:drawableStart="@drawable/ic_fuelgas"
             android:text="@string/service_gas_fee"
-            android:textSize="24sp"/>
+            android:textSize="24sp" />
 
     </RelativeLayout>
 
@@ -43,7 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:text="@string/organization"/>
+            android:text="@string/organization" />
 
         <TextView
             android:id="@+id/gas_apply_company"
@@ -52,7 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@id/gas_apply_organization"
             android:layout_alignParentEnd="true"
-            android:text="@string/company"/>
+            android:text="@string/company" />
 
         <TextView
             android:id="@+id/gas_apply_ID"
@@ -60,7 +60,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/gas_apply_organization"
-            android:text="@string/charge_ID"/>
+            android:text="@string/charge_ID" />
 
         <EditText
             android:id="@+id/gas_apply_id"
@@ -70,7 +70,7 @@
             android:layout_alignBaseline="@id/gas_apply_ID"
             android:layout_alignParentEnd="true"
             android:textColor="#696969"
-            android:text="@string/apply"/>
+            android:text="@string/apply" />
 
         <TextView
             android:id="@+id/property_apply_warning"
@@ -83,13 +83,11 @@
     </RelativeLayout>
 
 
-
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:text="@string/protocol"
-        />
+        android:text="@string/protocol" />
 
     <Button
         android:id="@+id/gas_the_next"
@@ -100,6 +98,6 @@
         android:background="@drawable/btn_shape"
         android:text="@string/the_next"
         android:textColor="@color/white"
-        android:textSize="23sp"/>
+        android:textSize="23sp" />
 
 </LinearLayout>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:background="@color/white"
-              android:orientation="horizontal"
-              android:padding="10dp">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:padding="10dp">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -18,15 +18,14 @@
             android:id="@+id/mall_iv_cereals"
             android:layout_width="@dimen/icon_small"
             android:layout_height="@dimen/icon_small"
-            android:background="@drawable/mall_cereals"
-            />
+            android:background="@mipmap/ic_mall_cereals" />
 
         <TextView
             android:id="@+id/mall_tv_cereals"
             style="@style/mall_list_item"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/mall_cereals"/>
+            android:text="@string/mall_cereals" />
     </LinearLayout>
 
     <LinearLayout
@@ -41,15 +40,14 @@
             android:id="@+id/mall_iv_fruit"
             android:layout_width="@dimen/icon_small"
             android:layout_height="@dimen/icon_small"
-            android:background="@drawable/mall_fruit"
-            />
+            android:background="@mipmap/ic_mall_fruit" />
 
         <TextView
             android:id="@+id/mall_tv_fruit"
             style="@style/mall_list_item"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/mall_fruit"/>
+            android:text="@string/mall_fruit" />
     </LinearLayout>
 
     <LinearLayout
@@ -64,15 +62,14 @@
             android:id="@+id/mall_iv_nourish"
             android:layout_width="@dimen/icon_small"
             android:layout_height="@dimen/icon_small"
-            android:background="@drawable/mall_nourish"
-            />
+            android:background="@mipmap/ic_mall_nourish" />
 
         <TextView
             android:id="@+id/mall_tv_nourish"
             style="@style/mall_list_item"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/mall_nourish"/>
+            android:text="@string/mall_nourish" />
     </LinearLayout>
 
     <LinearLayout
@@ -87,15 +84,14 @@
             android:id="@+id/mall_iv_snack"
             android:layout_width="@dimen/icon_small"
             android:layout_height="@dimen/icon_small"
-            android:background="@drawable/mall_snack"
-            />
+            android:background="@mipmap/ic_mall_snack" />
 
         <TextView
             android:id="@+id/mall_tv_snack"
             style="@style/mall_list_item"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/mall_snack"/>
+            android:text="@string/mall_snack" />
     </LinearLayout>
 
 </LinearLayout>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="horizontal">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
 
     <LinearLayout
         android:id="@+id/account_pay"
@@ -15,13 +15,12 @@
         <ImageView
             android:layout_width="@dimen/icon_middle"
             android:layout_height="@dimen/icon_middle"
-            android:background="@drawable/my_pay"
-            />
+            android:background="@mipmap/ic_my_pay" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/my_pay"/>
+            android:text="@string/my_pay" />
     </LinearLayout>
 
     <LinearLayout
@@ -35,13 +34,12 @@
         <ImageView
             android:layout_width="@dimen/icon_middle"
             android:layout_height="@dimen/icon_middle"
-            android:background="@drawable/my_deliver"
-            />
+            android:background="@mipmap/ic_my_deliver" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/my_deliver"/>
+            android:text="@string/my_deliver" />
     </LinearLayout>
 
     <LinearLayout
@@ -55,13 +53,12 @@
         <ImageView
             android:layout_width="@dimen/icon_middle"
             android:layout_height="@dimen/icon_middle"
-            android:background="@drawable/my_receive"
-            />
+            android:background="@mipmap/ic_my_receive" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/my_receive"/>
+            android:text="@string/my_receive" />
     </LinearLayout>
 
     <LinearLayout
@@ -75,13 +72,12 @@
         <ImageView
             android:layout_width="@dimen/icon_middle"
             android:layout_height="@dimen/icon_middle"
-            android:background="@drawable/my_evaluate"
-            />
+            android:background="@mipmap/ic_my_evaluate" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/my_evaluate"/>
+            android:text="@string/my_evaluate" />
     </LinearLayout>
 
     <LinearLayout
@@ -95,13 +91,12 @@
         <ImageView
             android:layout_width="@dimen/icon_middle"
             android:layout_height="@dimen/icon_middle"
-            android:background="@drawable/my_aftermarket"
-            />
+            android:background="@mipmap/ic_my_aftermarket" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/my_aftermarket"/>
+            android:text="@string/my_aftermarket" />
     </LinearLayout>
 
 </LinearLayout>

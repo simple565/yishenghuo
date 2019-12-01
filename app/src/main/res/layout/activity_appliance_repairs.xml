@@ -4,7 +4,7 @@
     android:background="@color/page_background"
     android:orientation="vertical">
 
-    <com.yishenghuo.yishenghuo.ui.TitleBar
+    <com.maureen.yishenghuo.ui.TitleBar
         android:id="@+id/appliance_repairs_titlebar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/TitleBar"
@@ -24,7 +24,7 @@
             android:id="@+id/appliance_repair_img1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/property" />
+            android:src="@mipmap/ic_property" />
 
         <TextView
             android:id="@+id/appliance_repair_name1"
@@ -65,7 +65,7 @@
             android:id="@+id/appliance_repair_img2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/property" />
+            android:src="@mipmap/ic_property" />
 
         <TextView
             android:id="@+id/appliance_repair_name2"

@@ -5,7 +5,7 @@
     android:fitsSystemWindows="true"
     android:orientation="vertical">
 
-    <com.yishenghuo.yishenghuo.ui.TitleBar
+    <com.maureen.yishenghuo.ui.TitleBar
         android:id="@+id/setting_titlebar"
         style="@style/TitleBar"
         android:layout_width="match_parent"
@@ -25,7 +25,7 @@
                 android:layout_width="@dimen/favicon"
                 android:layout_height="@dimen/favicon"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/my_favicon" />
+                android:background="@mipmap/ic_my_favicon" />
 
             <RelativeLayout
                 android:id="@+id/setting_layout_nickname"

@@ -4,7 +4,7 @@
     android:background="@color/page_background"
     android:orientation="vertical">
 
-    <com.yishenghuo.yishenghuo.ui.TitleBar
+    <com.maureen.yishenghuo.ui.TitleBar
         android:id="@+id/house_keeping_titlebar"
         style="@style/TitleBar"
         android:layout_width="match_parent"
@@ -22,7 +22,7 @@
             android:id="@+id/housekeeping_img1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/property" />
+            android:src="@mipmap/ic_property" />
 
         <TextView
             android:id="@+id/housekeeping_name1"
@@ -63,7 +63,7 @@
             android:id="@+id/housekeeping_img2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/property" />
+            android:src="@mipmap/ic_property" />
 
         <TextView
             android:id="@+id/housekeeping_name2"
